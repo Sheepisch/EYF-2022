@@ -1,3 +1,2 @@
-# teamXX
-
-Student's project Enjoy Your Flight
+# Studenten project Enjoy Your Flight
+### HBO-ICT deeltijd eerstejaars CS + SE
