@@ -1,2 +1,2 @@
-# Studenten project Enjoy Your Flight
+# project Enjoy Your Flight
 ### HBO-ICT deeltijd eerstejaars CS + SE
