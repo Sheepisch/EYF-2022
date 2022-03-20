@@ -1,0 +1,20 @@
+body {
+    background-image: url("../../assets/images/Aarde 3.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    text-align: center;
+
+    background-color: #39647c;
+}
+
+.svgLineClass{fill:#ffffff; fill-opacity:0; stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+.svgCircleClass{fill:none;stroke:#FFFFFF;stroke-width:2.4951;stroke-miterlimit:10;}
+.svgTextClass{fill: #ffffff; font-family:'Arial'; font-size: 22px}
+
+
+.svgLineClass:hover {
+    fill: white;
+    fill-opacity: 50%;
+}
