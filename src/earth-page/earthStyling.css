@@ -1,12 +1,29 @@
 body {
-    background-image: url("../../assets/images/Aarde 3.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 500px;
-    text-align: center;
-
     background-color: #39647c;
+}
+
+button {
+    height: 30px;
+    background-color: white;
+    border-color: #39647c;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+    float: right;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.upperMenu {
+    background-color: white;
+    border-radius: 10px;
+    fill-opacity: 90%;
+    height: 40px;
 }
 
 .svgLineClass{fill:#ffffff; fill-opacity:0; stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
@@ -17,4 +34,13 @@ body {
 .svgLineClass:hover {
     fill: white;
     fill-opacity: 50%;
+}
+
+#earthLabels {
+    background-image: url("../../assets/images/Aarde 3.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 475px;
+    text-align: center;
 }
