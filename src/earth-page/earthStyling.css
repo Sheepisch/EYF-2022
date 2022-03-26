@@ -1,6 +1,52 @@
 body {
     background-color: #39647c;
 }
+/* Header */
+header {
+    height: 80px;
+    background-color: #000;
+    opacity: 0.6;
+    justify-content: space-between;
+    display: flex;
+    color: #fff;
+    font-size: 25px;
+    margin: auto;
+    padding: 0 100px;
+    border-radius: 10px;
+}
+
+header img {
+    height: 80px;
+}
+
+.nav_flight_info {
+    display: flex;
+    margin: auto;
+    min-width: 600px;
+}
+
+.right {
+    display: flex;
+}
+
+header .right img {
+    height: 60px;
+    margin-top: 8px;
+}
+
+header .right i {
+    height: 60px;
+    margin-top: 40px;
+}
+
+.settings {
+    padding: 0 80px;
+}
+
+.from, .dest{
+    padding: 0 50px;
+}
+/* end header */
 
 button {
     height: 30px;
