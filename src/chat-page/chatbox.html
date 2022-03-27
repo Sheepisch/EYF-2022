@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Tulip Game Center</title>
-    <link href="paginaStyleTemplate.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/paginaStyleTemplate.css" rel="stylesheet" type="text/css">
+    <link href="chatboxStyle.css" rel="stylesheet" type="text/css">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+    <script src="chatbox.js"></script>
 </head>
 <body>
-<div class="upperMenu">
-    <button id="settings"><i class="fa-solid fa-sliders fa-xs"></i></button>
-    <button id="terug"><a href="../earth-page/earth.html"> <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
+<div class="upperMenu template">
+<button id="settings" class="templateButton"><i class="fa-solid fa-sliders fa-xs"></i></button>
+    <button id="terug" class="templateButton"><a href="../earth-page/earth.html">
+        <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
 </div>
-<div class="content">
+<div class="template">
+    <div>
     <div class="chatbox">
         <div class="inputField">
-            <i class="fa-solid fa-paper-plane"></i>
-            <div class="textArea"></div>
             <textarea id="chatIn" name="chatIn" autofocus></textarea>
+            <button id="send" class="sendButton" onclick="sendMessage()"><i class="fa-solid fa-paper-plane fa-xs"></i></button>
         </div>
     </div>
+    </div>
 
-</div>
 </div>
 </body>
 </html>
