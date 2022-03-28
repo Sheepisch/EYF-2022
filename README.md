@@ -8,7 +8,7 @@ Groep:  Jeffrey  - 500889236
         marien   - 
         Alana    - 
         Annette  - 500890018
-        Avi      - 
+        Avi      - 500888767
 
 Instructions: 
 ...
