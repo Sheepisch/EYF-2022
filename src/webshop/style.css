@@ -150,15 +150,13 @@ p {
 }
 
 .product-wrapper-3 {
-    width: 80%;
-    margin: 75px auto;
+    padding: 2em 20em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 5em;
     grid-row-gap: 2.5em;
     grid-auto-rows: 500px;
     grid-auto-columns: 200px;
-
 }
 
 .product-wrapper-3 > div {
@@ -177,6 +175,7 @@ p {
 
 div.product {
     position: relative;
+    width: 350px;
 }
 
 .product-discount {
