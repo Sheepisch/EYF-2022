@@ -9,10 +9,6 @@ body {
     min-height: 100vh;
 }
 
-.selector {
-    transition: transform 1s;
-}
-
 .logo img{
     width: 130px;
 }
@@ -154,13 +150,15 @@ p {
 }
 
 .product-wrapper-3 {
+    width: 80%;
+    margin: 75px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 5em;
     grid-row-gap: 2.5em;
-    padding: 2em 20em;
     grid-auto-rows: 500px;
     grid-auto-columns: 200px;
+
 }
 
 .product-wrapper-3 > div {
