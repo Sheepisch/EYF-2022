@@ -1,0 +1,92 @@
+body {
+    background-color: #39647c;
+}
+/* Header */
+header {
+    height: 80px;
+    background-color: #000;
+    opacity: 0.6;
+    justify-content: space-between;
+    display: flex;
+    color: #fff;
+    font-size: 25px;
+    margin: auto;
+    padding: 0 100px;
+    border-radius: 10px;
+}
+
+header img {
+    height: 80px;
+}
+
+.nav_flight_info {
+    display: flex;
+    margin: auto;
+    min-width: 600px;
+}
+
+.right {
+    display: flex;
+}
+
+header .right img {
+    height: 60px;
+    margin-top: 8px;
+}
+
+header .right i {
+    height: 60px;
+    margin-top: 40px;
+}
+
+.settings {
+    padding: 0 80px;
+}
+
+.from, .dest{
+    padding: 0 50px;
+}
+/* end header */
+
+button {
+    height: 30px;
+    background-color: white;
+    border-color: #39647c;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+    float: right;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.upperMenu {
+    background-color: white;
+    border-radius: 10px;
+    fill-opacity: 90%;
+    height: 40px;
+}
+
+.svgLineClass{fill:#ffffff; fill-opacity:0; stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+.svgCircleClass{fill:none;stroke:#FFFFFF;stroke-width:2.4951;stroke-miterlimit:10;}
+.svgTextClass{fill: #ffffff; font-family:'Arial'; font-size: 22px}
+
+
+.svgLineClass:hover {
+    fill: white;
+    fill-opacity: 50%;
+}
+
+#earthLabels {
+    background-image: url("../../assets/images/Aarde_Wijd.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 475px;
+    text-align: center;
+}

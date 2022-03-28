@@ -1,0 +1,73 @@
+body {
+    background-image: url("../../assets/images/Aarde 3.jpg");
+    background-size: 100%;
+    background-color: #39647c;
+    background-repeat: no-repeat;
+    background-position: -200%;
+    background-attachment: fixed;
+    font-family: Calibri, sans-serif;
+}
+button {
+    height: 30px;
+    background-color: white;
+    border-color: #39647c;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+    float: right;
+    transform: translateY(-10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+div {
+    border-radius: 5px;
+    box-sizing: content-box;
+    background-color: rgba(245, 255, 254, 0.8);
+    margin: 5px auto;
+    max-width: 900px;
+    min-width: 125px;
+    padding: 20px;
+    text-align: center;
+}
+.upperMenu {
+    background-color: white;
+    border-radius: 10px;
+    fill-opacity: 90%;
+    padding: 10px 20px;
+    text-align: left;
+}
+.title {
+    font-size: 18px;
+    padding: 0;
+    text-decoration: none;
+}
+.content {
+    text-align: left;
+}
+.item {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border: 3px solid #39647c;
+    border-radius: 10%;
+    display: inline-flex;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    justify-content: left;
+    box-shadow: 0 10px 10px rgba(119, 119, 119, 0.5);
+}
+.item:hover {
+    width: 160px;
+    height: 155px;
+    margin: 5px;
+    box-shadow: 0 15px 15px rgba(119, 119, 119, 0.5);
+}
+.gameImage {
+    width: 85%;
+    display: inline-block;
+    margin: auto;
+}

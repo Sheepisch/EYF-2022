@@ -3,18 +3,11 @@
 
 Project: Enjoy your flight.
 
-Groep:  
-
-        Jeffrey  - 500889236
-
-        Romeo    - 500817013
-
-        Marien   -
-
+Groep:  Jeffrey  - 500889236
+        Romeo    - 
+        marien   - 
         Alana    - 
-        
-        Annete   - 
-        
+        Annette  - 500890018
         Avi      - 
 
 Instructions: 
