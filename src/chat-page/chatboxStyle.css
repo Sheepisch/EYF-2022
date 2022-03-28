@@ -1,33 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+.contentBox {
+    height: 80%;
+    max-width: 900px;
+    min-width: 125px;
+    margin: 5px auto;
+    padding: 18px;
+    border-radius: 6px;
+}
+
 .chatbox {
-    margin: 30px auto;
-    height: 100%;
+    height: 90%;
+    margin: 30px;
+    width: 100%;
     max-width: 800px;
     max-height: 700px;
     border: 3px solid black;
     overflow: hidden;
-    display: flex;
+    display: block;
+    padding: 0;
+}
+
+.outputField {
+    border: 2px solid rgba(50, 50, 200);
+    height: 90%;
+    min-height: 40px;
+    margin: 5px;
+    padding: 0;
 }
 
 .inputField {
     border: 2px solid rgba(50, 50, 200);
-    width: 100%;
-    min-height: 40px;
-    margin: 80% 5px 5px;
+    height: 46px;
+    margin: 5px;
     display: flex;
     justify-content: space-between;
 }
 
-textarea {
+#chatIn {
     resize: none;
-    width: 90%;
-    margin: 2px;
+    height: 38px;
+    width: 100%;
+    margin: 4px;
+    transform: translateY(-2px);
     overflow: hidden;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+#chatOut {
+    resize: none;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    background-color: rgba(256, 256, 256, 0);
+    height: 100%;
+    width: 100%;
+    min-height: 40px;
+    padding: 0;
 }
 
 .sendButton {
-    margin: 2px;
+    margin: 4px;
     width: 50px;
-    height: 37px;
+    height: 38px;
+    transform: translateY(-2px);
     background-color: white;
     border-color: #39647c;
     border-width: 1px;
