@@ -3,98 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Tulip Air home</title>
-    <link href="earthStyling.css" rel="stylesheet" type="text/css">
-    <script src="https://kit.fontawesome.com/a360f97177.js" crossorigin="anonymous"></script>
+    <link href="earthStyling2.css" rel="stylesheet" type="text/css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 </head>
 <body>
-    <header>
-        <img src="../../assets/images/logo.png" alt="logo">
+<header>
+    <img id="logoHead" alt="logo" src="../../assets/images/logo.png">
 
-        <div class="nav_flight_info">
-            <div class="from">AMD</div>
-            <div class="flight-duration-line">
-                -----<i class="fa-solid fa-plane fa-xs"></i>------------
-            </div>
-            <div class="dest">DUB</div>
-            <div class="time">3:30 / 7:30</div>
+    <div class="nav_flight_info">
+        <div class="from">AMD</div>
+        <div class="flight-duration-line">
+            -----<i class="fa-solid fa-plane fa-xs"></i>------------
         </div>
-
-        <div class="right">
-            <div class="settings">
-                <i class="fa-solid fa-sliders fa-xl"></i>
-            </div>
-            <div class="question">
-                <img src="../../assets/images/question-mark.png" alt="question">
-            </div>
-        </div>
-    </header>
-
-    <div id="earthLabels">
-        <svg height="398px" viewBox="0 0 714 398" width="714px">
-            <g id="Teksten">
-                <text class="svgTextClass" transform="matrix(1 0 0 1 145 142)">Weer</text>
-                <text class="svgTextClass" transform="matrix(1 0 0 1 105 243)">Games</text>
-                <text class="svgTextClass" transform="matrix(1 0 0 1 145 340)">Winkelen</text>
-                <text class="svgTextClass" transform="matrix(1 0 0 1 488 339)">Reisinfo</text>
-                <text class="svgTextClass" transform="matrix(1 0 0 1 560 243)">Chat</text>
-                <text class="svgTextClass" transform="matrix(1 0 0 1 508 142)">Media</text>
-            </g>
-            <g id="Labels">
-                <g id="weerLabel">
-                    <path class="svgLineClass" d="M256.7,129.23v11.06c0,4.87-3.95,8.82-8.82,8.82h-99.64c-4.87,0-8.82-3.95-8.82-8.82v-11.06
-                c0-4.87,3.95-8.82,8.82-8.82h99.64C252.75,120.41,256.7,124.36,256.7,129.23z"/>
-                    <g>
-                        <line class="svgLineClass" x1="336.45" x2="256.7" y1="172.73" y2="134.76"/>
-                    </g>
-                    <circle class="svgCircleClass" cx="341.57" cy="174.03" r="5.3"/>
-                </g>
-                <g id="gamesLabel">
-                    <a href="../Games/GamesHome.html">
-                        <path class="svgLineClass" d="M199.85,244.01v-15.24c0-3.71-3.01-6.73-6.73-6.73h-86.98c-3.71,0-6.73,3.01-6.73,6.73v15.24
-                c0,3.71,3.01,6.73,6.73,6.73h86.98C196.84,250.74,199.85,247.72,199.85,244.01z"/>
-                    </a>
-                    <g>
-                        <line class="svgLineClass" x1="305.71" x2="199.85" y1="231.09" y2="236.67"/>
-                    </g>
-                    <circle class="svgCircleClass" cx="311.01" cy="231.09" r="5.3"/>
-                </g>
-                <g id="winkelLabel">
-                    <path class="svgLineClass" d="M256.7,338.7v-13.08c0-4.31-3.5-7.81-7.81-7.81H147.23c-4.31,0-7.81,3.5-7.81,7.81v13.08
-                c0,4.31,3.5,7.81,7.81,7.81h101.65C253.2,346.51,256.7,343.01,256.7,338.7z"/>
-                    <g>
-                        <line class="svgLineClass" x1="348.18" x2="256.7" y1="284.14" y2="332.16"/>
-                    </g>
-                    <circle class="svgCircleClass" cx="352.18" cy="280.69" r="5.3"/>
-                </g>
-                <g id="mediaLabel">
-                    <path class="svgLineClass" d="M455.51,129.97v10.13c0,5.13,4.16,9.28,9.28,9.28h98.71c5.13,0,9.28-4.16,9.28-9.28v-10.13
-                c0-5.13-4.16-9.28-9.28-9.28h-98.71C459.67,120.69,455.51,124.85,455.51,129.97z"/>
-                    <g>
-                        <line class="svgLineClass" x1="426.48" x2="455.51" y1="174.03" y2="135.04"/>
-                    </g>
-                    <circle class="svgCircleClass" cx="423.03" cy="178.03" r="5.3"/>
-                </g>
-                <g id="chatLabel">
-                    <a href="../chat-page/chatbox.html">
-                        <path class="svgLineClass" d="M514.15,243.18v-13.03c0-4.32,3.51-7.83,7.83-7.83h84.77c4.32,0,7.83,3.51,7.83,7.83v13.03
-                c0,4.32-3.51,7.83-7.83,7.83h-84.77C517.65,251.01,514.15,247.51,514.15,243.18z"/>
-                    </a>
-                    <g>
-                        <line class="svgLineClass" x1="375.31" x2="514.15" y1="213.9" y2="236.67"/>
-                    </g>
-                    <circle class="svgCircleClass" cx="370" cy="213.9" r="5.3"/>
-                </g>
-                <g id="infoLabel">
-                    <path class="svgLineClass" d="M455.51,338.63v-12.39c0-4.5,3.65-8.15,8.15-8.15h100.97c4.5,0,8.15,3.65,8.15,8.15v12.39
-                c0,4.5-3.65,8.15-8.15,8.15H463.66C459.16,346.78,455.51,343.13,455.51,338.63z"/>
-                    <g>
-                        <line class="svgLineClass" x1="361.8" x2="455.51" y1="257.25" y2="332.43"/>
-                    </g>
-                    <circle class="svgCircleClass" cx="357.48" cy="254.21" r="5.3"/>
-                </g>
-            </g>
-        </svg>
+        <div class="dest">DUB</div>
+        <div class="time">3:30 / 7:30</div>
     </div>
+
+    <div class="right">
+        <div class="settings">
+            <i class="fa-solid fa-sliders fa-xl"></i>
+        </div>
+    </div>
+</header>
+
+<div id="earthLabels">
+    <svg height="auto" viewBox="0 0 714 400" width=100%>
+        <g id="Teksten">
+            <text class="svgTextClass" transform="matrix(1 0 0 1 130 62)">Weer</text>
+            <text class="svgTextClass" transform="matrix(1 0 0 1 80 202)">Games</text>
+            <text class="svgTextClass" transform="matrix(1 0 0 1 130 342)">Winkelen</text>
+            <text class="svgTextClass" transform="matrix(1 0 0 1 525 62)">Media</text>
+            <text class="svgTextClass" transform="matrix(1 0 0 1 588 202)">Chat</text>
+            <text class="svgTextClass" transform="matrix(1 0 0 1 505 342)">Reisinfo</text>
+        </g>
+        <g id="Labels">
+            <g id="weerLabel">
+                <rect class="svgLineClass" height="30" rx="10" width="130" x="120" y="40"></rect>
+                <line class="svgLineClass" x1="336" x2="250" y1="120" y2="55"/>
+                <circle class="svgCircleClass" cx="342" cy="120" r="5"/>
+            </g>
+            <g id="gamesLabel">
+                <a href="../Games/GamesHome.html">
+                    <rect class="svgLineClass" height="30" rx="10" width="130" x="70" y="180"></rect>
+                </a>
+                <line class="svgLineClass" x1="305" x2="200" y1="200" y2="195"/>
+                <circle class="svgCircleClass" cx="311" cy="200" r="5"/>
+            </g>
+            <g id="winkelLabel">
+                <rect class="svgLineClass" height="30" rx="10" width="130" x="120" y="320"></rect>
+                <line class="svgLineClass" x1="345" x2="250" y1="275" y2="335"/>
+                <circle class="svgCircleClass" cx="351" cy="275" r="5"/>
+            </g>
+            <g id="mediaLabel">
+                <rect class="svgLineClass" height="30" rx="10" width="130" x="465" y="40"></rect>
+                <line class="svgLineClass" x1="426" x2="465" y1="174" y2="55"/>
+                <circle class="svgCircleClass" cx="423" cy="178" r="5"/>
+            </g>
+            <g id="chatLabel">
+                <a href="../chat-page/chatbox.html">
+                    <rect class="svgLineClass" height="30" rx="10" width="130" x="515" y="180"></rect>
+                </a>
+                <line class="svgLineClass" x1="375" x2="514" y1="214" y2="195"/>
+                <circle class="svgCircleClass" cx="372" cy="214" r="5"/>
+            </g>
+            <g id="infoLabel">
+                <rect class="svgLineClass" height="30" rx="10" width="130" x="465" y="320"></rect>
+                <line class="svgLineClass" x1="362" x2="465" y1="257" y2="335"/>
+                <circle class="svgCircleClass" cx="357" cy="254" r="5"/>
+            </g>
+        </g>
+    </svg>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,85 @@
+body {
+    background-color: #39647c;
+    font-family: sans-serif;
+    text-align: center;
+    alignment: center;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+#logoHead {
+    padding-left: 5%;
+}
+.nav_flight_info {
+    display: flex;
+}
+
+@media only screen and (min-width: 1025px){
+    /* Header */
+    header {
+        height: 70px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    body {
+        width: 75%;
+    }
+    .nav_flight_info {
+        padding-top: 20px;
+    }
+
+}
+@media only screen and (max-width: 1024px){
+    /* Header */
+    header {
+        height: 45px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+    body {
+        width: 75%;
+    }
+    .nav_flight_info {
+        padding-top: 15px;
+    }
+}
+@media only screen and (max-width: 600px){
+    /* Header */
+    header {
+        height: 30px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    body {
+        width: 95%;
+    }
+    .nav_flight_info {
+        padding-top: 10px;
+    }
+}
+
+/* Het svg gedeelte met knoppen en afbeelding */
+.svgCircleClass{fill:none;stroke:#FFFFFF;stroke-width:2.4951;stroke-miterlimit:10;}
+.svgTextClass{fill: #ffffff; font-family:'Arial'; font-size: 22px}
+.svgLineClass{fill:#ffffff; fill-opacity:0; stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+.svgLineClass:hover {
+    fill: white;
+    fill-opacity: 50%;
+}
+#earthLabels {
+    background-image: url("../../assets/images/Aarde 4.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+/* Einde svg gedeelte met knoppen en afbeelding */
+
