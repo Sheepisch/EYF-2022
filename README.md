@@ -12,3 +12,8 @@ Groep:  Jeffrey  - 500889236
 
 Instructions: 
 ...
+
+install node from browser..
+
+Start server -> npm run devStart
+Link landingpage -> localhost:3000/src/earth-page/earth.html
