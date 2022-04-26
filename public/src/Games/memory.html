@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="gamesStyle.css" rel="stylesheet" type="text/css">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+    <script src="memoryGedrag.js"></script>
+    <title>Tulip Air - Memory</title>
+</head>
+
+<body onload="shuffleCards()">
+<div class="upperMenu">
+    <s class="title">Memory</s>
+    <button id="settings"><i class="fa-solid fa-sliders fa-xs"></i></button>
+    <button id="back"><a href="gamesHome.html"> <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
+</div>
+
+<div class="content" id="Preface">
+    The purpose of this game is to match the cards. <br>
+    As the cards are hidden, you have to remember where they are to match them.<br>
+    Good luck!
+</div>
+
+<div class="content" id="Game">
+    <span id="Card1" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+    <span id="Card2" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+    <span id="Card3" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+    <span id="Card4" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+    <span id="Card5" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+    <span id="Card6" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+    <span id="Card7" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+    <span id="Card8" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+    <span id="Card9" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+    <span id="Card10" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+    <span id="Card11" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+    <span id="Card12" onclick="turnCard(this)">
+        <img class="card back" src="../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
+        <img class="card front" src="" alt="Memory card front">
+    </span>
+
+</div>
+
+<div class="sideButton" onclick="shuffleCards()">Restart game</div>
+
+</body>
+</html>
