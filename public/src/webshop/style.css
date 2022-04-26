@@ -168,11 +168,21 @@ picture img {
  }
 
  .detail button:hover {
-     background-color: var(--gra);
+     background-color: white;
  }
  li h4 {
      position: absolute;
      right: 10px;
      top: 40%;
      font-size: 30px;
+ }
+ .filter-condition select {
+     width: 120px;
+     padding: 0 0 0 30px;
+     border: none;
+     outline: none;
+     font-weight: bold;
+     color: grey;
+     background: transparent;
+     cursor: pointer;
  }
