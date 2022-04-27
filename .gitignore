@@ -124,3 +124,5 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+#ignore DB config file
+.db_config.js
