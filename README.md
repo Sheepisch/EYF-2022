@@ -18,3 +18,7 @@ install node from browser..
 Start server -> npm run devStart
 install nodemon -> npm i nodemon
 Link landingpage -> localhost:3000/src/earth-page/earth.html
+
+configure DB connectie: 
+        db_config.js -> set username, password
+        create DB named -> EYF

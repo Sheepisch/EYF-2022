@@ -1,8 +1,12 @@
 const express = require('express')
 const app = express()
+const connection = require('./db_config')
+
+app.listen(3000, function() {
+    connection.connect(function(err) {
+        if (err) throw err
+        console.log('database connected!')
+    })
+})
 
 app.use(express.static('public'))
-
-app.set('view engine', 'ejs')
-
-app.listen(3000)
