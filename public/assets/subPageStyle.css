@@ -1,0 +1,123 @@
+body {
+    background-image: url("../assets/images/Aarde 3.jpg");
+    background-size: 100%;
+    background-color: #39647c;
+    background-repeat: no-repeat;
+    background-position: -200%;
+    background-attachment: fixed;
+    font-family: Calibri, sans-serif;
+    alignment: center;
+    max-width: 80vw;
+    min-width: 15vw;
+    margin: auto;
+}
+div {
+    margin: 5px auto;
+    box-sizing: content-box;
+}
+button {
+    height: 30px;
+    min-height: 15px;
+    background-color: white;
+    border-color: #39647c;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+    float: right;
+    transform: translateY(-10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.upperMenu {
+    background-color: white;
+    border-radius: 1vh;
+    fill-opacity: 90%;
+    padding: 10px 20px;
+    text-align: left;
+    height: 4vh;
+    min-height: 20px;
+    max-height: 30px;
+}
+.title {
+    font-size: 18px;
+    padding: 0;
+    text-decoration: none;
+}
+.content {
+    text-align: left;
+    border-radius: 5px;
+    box-sizing: content-box;
+    background-color: rgba(245, 255, 254, 0.8);
+    padding: 10px;
+}
+.sideButton {
+    height: 35px;
+    width: 75px;
+    box-shadow: 5px 10px 10px rgba(119, 119, 119, 0.5);
+    border-color: rgba(135, 171, 126, 0.75);
+    border-width: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+
+    display: block;
+    position: fixed;
+    justify-content: center;
+    z-index: 1;
+    align-items: center;
+    text-align: center;
+    top: 55px;
+    right: 70px;
+}
+.sideButton:hover {
+    height: 40px;
+    width: 80px;
+}
+/*html, body {
+    width: calc(100% - 1em);
+    height: calc(100% - 1em);
+}
+
+body {
+    background-image: url("/assets/images/Aarde 3.jpg");
+    background-size: 100%;
+    background-color: #39647c;
+    background-repeat: no-repeat;
+    background-position: -200%;
+    background-attachment: fixed;
+}
+
+.templateButton {
+    height: 30px;
+    background-color: white;
+    border-color: #39647c;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+    float: right;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.header {
+    border-radius: 5px;
+    background-color: rgba(245, 255, 254, 0.8);
+    margin: 5px auto;
+    max-width: 900px;
+    min-width: 125px;
+    padding: 20px;
+}
+.upperMenu {
+    background-color: white;
+    border-radius: 10px;
+    fill-opacity: 90%;
+}
+*/

@@ -1,8 +1,8 @@
 function toMemory() {
-    window.location.href = "memory.html";
+    window.location.href = "memory/memory.html";
 }
 function toNoughts() {
-    window.location.href = "noughtCrosses.html";
+    window.location.href = "noughtsCrosses/noughtCrosses.html";
 }
 function toSnake() {
     window.location.href = "snake/snake.html";

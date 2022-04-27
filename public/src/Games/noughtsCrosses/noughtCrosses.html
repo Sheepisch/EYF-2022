@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <title>Tulip Air - Noughts and Crosses</title>
-    <link href="gamesStyle.css" rel="stylesheet" type="text/css">
+    <link href="../gamesStyle.css" rel="stylesheet" type="text/css">
+    <link href="noughtCrossesStyle.css" rel="stylesheet" type="text/css">
+    <link href="../../../assets/subPageStyle.css" rel="stylesheet" type="text/css">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
     <script src="noughtCrossesGedrag.js"></script>
     <!-- This game of noughts and crosses is based on code from Jessie Beesch and adjusted by Annette Blank -->
@@ -12,11 +14,11 @@
 <div class="upperMenu">
     <s class="title">Noughts and Crosses</s>
     <button id="settings"><i class="fa-solid fa-sliders fa-xs"></i></button>
-    <button id="back"><a href="gamesHome.html"> <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
+    <button id="back"><a href="../gamesHome.html"> <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
 </div>
 
 <div class="content">
-    <div class="container">
+    <div id="game" class="container">
         <div class="box" id="0" onclick="setBox(this)"></div>
         <div class="box" id="1" onclick="setBox(this)"></div>
         <div class="box" id="2" onclick="setBox(this)"></div>
@@ -29,7 +31,9 @@
     </div>
 </div>
 
-<div class="sideButton" onclick="shuffleCards()">Restart game</div>
+<div id="winScreen">X heeft gewonnen!</div>
+
+<div class="sideButton" onclick="restartGame('game')">Restart game</div>
 </body>
 
 </html>
