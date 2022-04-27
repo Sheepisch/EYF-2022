@@ -125,4 +125,4 @@ target/
 .ipynb_checkpoints
 
 #ignore DB config file
-.db_config.js
+db_config.js
