@@ -1,0 +1,6 @@
+#board {
+    padding: 0;
+    margin: auto;
+    display: block;
+    background-image: url("../../../../public/assets/images/globe.png");
+}

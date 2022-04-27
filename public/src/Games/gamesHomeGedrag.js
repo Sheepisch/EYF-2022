@@ -4,4 +4,7 @@ function toMemory() {
 function toNoughts() {
     window.location.href = "noughtCrosses.html";
 }
+function toSnake() {
+    window.location.href = "snake/snake.html";
+}
 

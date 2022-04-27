@@ -31,8 +31,9 @@ function update() {
     if (gameOver) {
         return;
     }
+
     // fill the canvas
-    context.fillStyle = '#000';
+    context.fillStyle = '#fff';
     context.fillRect(0, 0, board.width, board.height);
 
     context.fillStyle = 'red';

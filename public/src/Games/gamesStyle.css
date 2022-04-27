@@ -66,6 +66,7 @@ button {
     height: 155px;
     margin: 5px;
     box-shadow: 0 15px 15px rgba(119, 119, 119, 0.5);
+    cursor: pointer;
 }
 .gameImage {
     width: 85%;
@@ -89,7 +90,7 @@ button {
     align-items: center;
     text-align: center;
     top: 10vh;
-    right: 5vw;
+    right: 36vw;
 }
 .sideButton:hover {
     height: 40px;
