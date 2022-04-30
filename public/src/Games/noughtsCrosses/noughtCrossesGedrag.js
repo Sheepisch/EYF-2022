@@ -3,6 +3,7 @@ const boxes = document.getElementsByClassName("box");
 
 // Setting the start icon
 let icon = "X";
+
 // toggling between the icons
 function toggle() {
     if (icon === "X") {
@@ -16,8 +17,8 @@ function toggle() {
 function setBox(box) {
     if (box.innerHTML === "") {
         box.innerHTML = icon;
+        toggle();
     }
-    toggle();
     checkForWinner();
 }
 
@@ -32,6 +33,7 @@ const winningArrays = [
     [0, 4, 8],
     [2, 4, 6]
 ]
+
 // Check board for a winning combo
 function checkForWinner() {
     let xArray = [];
@@ -50,18 +52,29 @@ function checkForWinner() {
     }
 
     // compare the arrays with the winning combinations
-    const xStr = xArray.join();
-    const oStr = oArray.join();
-    // The win screen
-    let winScreen = document.getElementById("winScreen");
+    const entryCount = xArray.length + oArray.length;
     for (let i = 0; i < 8; i++) {
-        if (xStr.includes(winningArrays[i].join() )) {
+        const winScreen = document.getElementById("winScreen");
+        const winText = document.getElementById("winText");
+        const maxEntries = 9; // The amount of entries when the game is full
+
+        if (xArray.includes(winningArrays[i][0])) {
+            if (xArray.includes(winningArrays[i][1])) {
+                if (xArray.includes(winningArrays[i][2])) {
+                    winScreen.style.display = "block";
+                    winText.innerHTML = "X has won!";
+                }
+            }
+        } else if (oArray.includes(winningArrays[i][0])) {
+            if (oArray.includes(winningArrays[i][1])) {
+                if (oArray.includes(winningArrays[i][2])) {
+                    winScreen.style.display = "block";
+                    winText.innerHTML = "O has won!";
+                }
+            }
+        } else if (entryCount === maxEntries) {
             winScreen.style.display = "block";
-            winScreen.innerHTML = "X heeft gewonnen";
-        }
-        else if (oStr.includes(winningArrays[i].join() )) {
-            winScreen.style.display = "block";
-            winScreen.innerHTML = "O heeft gewonnen";
+            winText.innerHTML = "It's a draw!";
         }
     }
 }
@@ -75,7 +88,7 @@ function restartGame(game) {
         boxes[n].innerHTML = "";
     }
     // Hide winning screen
-    if (winScreen.style.display === "block"){
+    if (winScreen.style.display === "block") {
         winScreen.style.display = "none";
     }
     // Set the starting icon to X

@@ -13,8 +13,8 @@
 <body onload="shuffleCards()">
 <div class="upperMenu">
     <s class="title">Memory</s>
-    <button id="settings"><i class="fa-solid fa-sliders fa-xs"></i></button>
-    <button id="back"><a href="../gamesHome.html"> <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
+    <button class="upperMenuButton" id="settings"><i class="fa-solid fa-sliders fa-xs"></i></button>
+    <button class="upperMenuButton" id="back"><a href="../gamesHome.html"> <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
 </div>
 
 <div class="content" id="Preface">
@@ -23,7 +23,8 @@
     Good luck!
 </div>
 
-<div class="content" id="Game">
+<div class="content">
+<div class="memory"  id="Game">
     <span id="Card1" onclick="turnCard(this)">
         <img class="card back" src="../../../assets/images/gamesImages/Kaarten_Tulp.jpg" alt="Memory card back">
         <img class="card front" src="" alt="Memory card front">
@@ -74,7 +75,7 @@
     </span>
 
 </div>
-
+</div>
 <div class="sideButton" onclick="shuffleCards()">Restart game</div>
 
 </body>

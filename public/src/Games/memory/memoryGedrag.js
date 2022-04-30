@@ -79,7 +79,7 @@ function placeCards (cardNamesArray) {
     let count = 0;
     for (let i = 0 ; i < cardNamesArray.length ; i++) {
 
-        frontCards[count].src = "../../assets/images/gamesImages/memory/" + cardNamesArray[count];
+        frontCards[count].src = "../../../assets/images/gamesImages/memory/" + cardNamesArray[count];
         // hide the front for all the cards
         turnToBack(game[count]);
         count += 1;

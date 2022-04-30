@@ -11,10 +11,12 @@ body {
     min-width: 15vw;
     margin: auto;
 }
+
 div {
     margin: 5px auto;
     box-sizing: content-box;
 }
+
 button {
     height: 30px;
     min-height: 15px;
@@ -29,8 +31,12 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
+}
+.upperMenuButton {
     font-size: 30px;
 }
+
 .upperMenu {
     background-color: white;
     border-radius: 1vh;
@@ -41,11 +47,13 @@ button {
     min-height: 20px;
     max-height: 30px;
 }
+
 .title {
     font-size: 18px;
     padding: 0;
     text-decoration: none;
 }
+
 .content {
     text-align: left;
     border-radius: 5px;
@@ -53,6 +61,7 @@ button {
     background-color: rgba(245, 255, 254, 0.8);
     padding: 10px;
 }
+
 .sideButton {
     height: 35px;
     width: 75px;
@@ -72,10 +81,12 @@ button {
     top: 55px;
     right: 70px;
 }
+
 .sideButton:hover {
     height: 40px;
     width: 80px;
 }
+
 /*html, body {
     width: calc(100% - 1em);
     height: calc(100% - 1em);

@@ -13,12 +13,12 @@
 <body>
 <div class="upperMenu">
     <s class="title">Noughts and Crosses</s>
-    <button id="settings"><i class="fa-solid fa-sliders fa-xs"></i></button>
-    <button id="back"><a href="../gamesHome.html"> <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
+    <button class="upperMenuButton" id="settings"><i class="fa-solid fa-sliders fa-xs"></i></button>
+    <button class="upperMenuButton" id="back"><a href="../gamesHome.html"> <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
 </div>
 
 <div class="content">
-    <div id="game" class="container">
+    <div class="container" id="game">
         <div class="box" id="0" onclick="setBox(this)"></div>
         <div class="box" id="1" onclick="setBox(this)"></div>
         <div class="box" id="2" onclick="setBox(this)"></div>
@@ -31,7 +31,11 @@
     </div>
 </div>
 
-<div id="winScreen">X heeft gewonnen!</div>
+<div id="winScreen">
+    <span id="winText">X has won!</span>
+    <br>
+    <button id="restartButton" onclick="restartGame('game')">Restart</button>
+</div>
 
 <div class="sideButton" onclick="restartGame('game')">Restart game</div>
 </body>

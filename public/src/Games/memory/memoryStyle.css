@@ -15,3 +15,6 @@
     box-shadow: 0 15px 15px rgba(119, 119, 119, 0.5);
 }
 /* End memory */
+#Game {
+    width: 600px;
+}
