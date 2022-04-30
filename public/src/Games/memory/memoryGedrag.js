@@ -1,3 +1,5 @@
+let turnedCards = 0;
+
 // Turns the card around
 function turnCard(card) {
     const back = card.firstElementChild;
@@ -6,9 +8,14 @@ function turnCard(card) {
     if (back.style.display === "none") {
         back.style.display = "inline";
         front.style.display = "none";
+        turnedCards -= 1;
     } else {
         back.style.display = "none";
         front.style.display = "inline";
+        turnedCards += 1;
+    }
+    if (turnedCards >= 2){
+        console.log(turnedCards);
     }
 }
 
