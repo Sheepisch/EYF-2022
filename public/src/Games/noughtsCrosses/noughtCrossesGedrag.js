@@ -63,6 +63,7 @@ function checkForWinner() {
                 if (xArray.includes(winningArrays[i][2])) {
                     winScreen.style.display = "block";
                     winText.innerHTML = "X has won!";
+                    break;
                 }
             }
         } else if (oArray.includes(winningArrays[i][0])) {
@@ -70,9 +71,11 @@ function checkForWinner() {
                 if (oArray.includes(winningArrays[i][2])) {
                     winScreen.style.display = "block";
                     winText.innerHTML = "O has won!";
+                    break;
                 }
             }
-        } else if (entryCount === maxEntries) {
+        } 
+        if (entryCount === maxEntries) {
             winScreen.style.display = "block";
             winText.innerHTML = "It's a draw!";
         }
