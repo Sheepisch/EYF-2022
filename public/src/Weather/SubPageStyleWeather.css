@@ -9,9 +9,9 @@ body {
 }
 
 div {
-    border-radius: 5px;
-    box-sizing: content-box;
-    background-color: rgba(245, 255, 254, 0.3);
+   //  border-radius: 5px;
+   // box-sizing: content-box;
+   // background-color: rgba(245, 255, 254, 0.3);
     opacity: 1.0;
     margin: 5px auto;
     max-width: 900px;

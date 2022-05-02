@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tulip Destination Weather</title>
+    <title>Tulip Weather</title>
     <link href="SubPageStyleWeather.css" rel="stylesheet" type="text/css">
     <link href="../../assets/subPageStyle.css" rel="stylesheet" type="text/css">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
 </head>
 <body>
+    <form action="/" method="post">
+        <label>City Name:</label>
+        <input type="text" name="city" id="city" autocomplete="on"><br/>
+        <button type="submit">Search</button>
+    </form>
 <div class="upperMenu">
     <s class="title">Weather</s>
     <button class="upperMenuButton" id="settings"><i class="fa-solid fa-sliders fa-xs"></i></button>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Captive Portal Login Page</title>
+  <link href="Example.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="content">
+  <div class="login-card">
+    <img src="../../assets/images/logos.svg" alt="logo Tulip Air"/><br>
+    <h1></h1>
+    <form name="login_form" method="post" >
+      <label for="auth_user"></label><input type="text" name="auth_user" placeholder="Username" id="auth_user">
+      <label for="auth_pass"></label><input type="password" name="auth_pass" placeholder="Password" id="auth_pass">
+      <div class="login-help">
+        <ul class="list">
+          <li class="list__item">
+            <label class="label--checkbox">
+              <input type="checkbox" class="checkbox" onchange="document.getElementById('login').disabled = !this.checked;">
+              <span>I agree with the <a target="_blank" rel="noopener" href="https://www.termslicences.com/example.pdf">terms & licences</a></span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <input name="redirect" type="hidden" value="$PORTAL_REDIRECT$">
+      <input type="submit" name="accept" class="login login-submit" value="Login" id="login" disabled>
+    </form>
+  </div>
+</div>
+</body>
+</html>
