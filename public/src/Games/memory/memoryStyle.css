@@ -14,7 +14,11 @@
     margin: 5px;
     box-shadow: 0 15px 15px rgba(119, 119, 119, 0.5);
 }
-/* End memory */
+.matched {
+    border: 2px solid #58e72d;
+}
+
 #Game {
     width: 600px;
 }
+/* End memory */

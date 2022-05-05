@@ -1,21 +1,60 @@
-let turnedCards = 0;
+let turnedCardsCount = 0;
+let turnedCards = [];
+let matchedCards = 0;
+const totalPlayingCardMatches = 6;
 
 // Turns the card around
 function turnCard(card) {
     const back = card.firstElementChild;
     const front = card.lastElementChild;
+    let classNameFront = front.className;
 
-    if (back.style.display === "none") {
-        back.style.display = "inline";
-        front.style.display = "none";
-        turnedCards -= 1;
-    } else {
-        back.style.display = "none";
-        front.style.display = "inline";
-        turnedCards += 1;
+    // Turn the clicked card when there are less than two cards turned
+    // and it isn't a matched card
+    if (turnedCardsCount < 2 && classNameFront !== "card front matched"){
+        if (back.style.display === "none") {
+            back.style.display = "inline";
+            front.style.display = "none";
+            turnedCards.push(card);
+            // Subtract a card of the amount of turned cards
+            turnedCardsCount -= 1;
+        } else {
+            back.style.display = "none";
+            front.style.display = "inline";
+            // Add the card to the array
+            turnedCards.push(card);
+            // Add a card of the amount of to the turned cards
+            turnedCardsCount += 1;
+        }
     }
-    if (turnedCards >= 2){
-        console.log(turnedCards);
+
+    // When two cards are selected they are automatically turned after two seconds
+    if (turnedCardsCount === 2){
+
+        if (turnedCards[0].lastElementChild.src === turnedCards[1].lastElementChild.src){
+            // Make the cards invisible
+            turnedCards[0].lastElementChild.className = "card front matched";
+            turnedCards[1].lastElementChild.className = "card front matched";
+
+            turnedCards = [];
+            turnedCardsCount = 0;
+            matchedCards += 1;
+        }else {
+            const timeToWait = 1500; // 1500ms = 1,5 seconds
+            setTimeout(function(){
+                turnedCards.forEach(card => turnToBack(card));
+                turnedCards = [];
+                turnedCardsCount = 0;
+            }, timeToWait);
+        }
+    }
+
+    console.log(totalPlayingCardMatches + " " + matchedCards);
+    // See werther all the cards are matched
+    if (matchedCards === totalPlayingCardMatches){
+        const winScreen = document.getElementById("winScreen");
+        winScreen.style.display = "block";
+        matchedCards = 0;
     }
 }
 
@@ -61,6 +100,13 @@ function shuffleCards() {
     const cardCouples = 6;
     let numberList = [];
 
+    // The win screen
+    let winScreen = document.getElementById("winScreen");
+    // Hide winning screen
+    if (winScreen.style.display === "block") {
+        winScreen.style.display = "none";
+    }
+
     // Form an array with the amount of choices
     for (let n = 0; numberList.length < choiceCount; n++) {
         numberList.push(n);
@@ -83,10 +129,13 @@ function shuffleCards() {
 function placeCards (cardNamesArray) {
     let frontCards = document.getElementsByClassName("card front");
     let game = document.getElementById("Game").children;
+    let card = document.getElementsByClassName("cardHolder");
     let count = 0;
     for (let i = 0 ; i < cardNamesArray.length ; i++) {
 
         frontCards[count].src = "../../../assets/images/gamesImages/memory/" + cardNamesArray[count];
+        // Set the class name to "card front" for a restart
+        frontCards[count].className = "card front";
         // hide the front for all the cards
         turnToBack(game[count]);
         count += 1;
