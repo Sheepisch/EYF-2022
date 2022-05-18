@@ -4,9 +4,6 @@
 Project: Enjoy your flight.
 
 Groep:  Jeffrey  - 500889236
-        Romeo    - 
-        marien   - 
-        Alana    - 
         Annette  - 500890018
         Avi      - 500888767
 
@@ -17,7 +14,7 @@ install node from browser..
 
 Start server -> npm run devStart
 install nodemon -> npm i nodemon
-Link landingpage -> localhost:3000/src/earth-page/earth.html
+Link landingpage -> localhost:3000/earth
 
 configure DB connectie: 
         db_config.js -> set username, password
