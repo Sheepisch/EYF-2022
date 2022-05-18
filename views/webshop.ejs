@@ -33,8 +33,8 @@
     <div class="navbar">
         <nav class="filter-nav">
             <ul class="indicator">
-                <li data-filter="soft-drinks"><a href="#soft-drinks" class="nav-a">Soft Drinks</a></li>
-                <li data-filter="food"><a href="" class="nav-a">Food</a></li>
+                <li data-filter="drinks"><a href="#" class="nav-a">Drinks</a></li>
+                <li data-filter="food"><a href="#" class="nav-a">Food</a></li>
             </ul>
             <div class="filter-condition">
                 <span>View as </span>
@@ -64,7 +64,7 @@
                             <span><%= product.description %></span>
                             <button>Buy now</button>
                         </div>
-                        <h4><%= product.price %></h4>
+                        <h4>€ <%= product.price %></h4>
                     </li>
                 <% }) %>
             <% } else { %>
@@ -72,157 +72,6 @@
             <% } %>
         </ul>
     </div>
-
-
-
-    <!-- <div class="product-field">
-        <ul class="items">
-            <li data-category="" data-price="">
-                <picture>
-                    <img src="../../assets/images/webshop/products/product-cola-can.png" alt="">
-                </picture>
-                <div class="detail">
-                    <p class="icon">
-                        <span><i class="far fa-heart"></i></span>
-                        <span><i class="far fa-square"></i></span>
-                        <span><i class="fas fa-shopping-basket"></i></span>
-                    </p>
-                    <strong>Coca cola</strong>
-                    <span>lorem ipsum</span>
-                    <button>Buy now</button>
-                </div>
-                <h4>€3.99</h4>
-            </li>
-            <li data-category="" data-price="">
-                <picture>
-                    <img src="../../assets/images/webshop/products/product-cola-light-can.png" alt="">
-                </picture>
-                <div class="detail">
-                    <p class="icon">
-                        <span><i class="far fa-heart"></i></span>
-                        <span><i class="far fa-square"></i></span>
-                        <span><i class="fas fa-shopping-basket"></i></span>
-                    </p>
-                    <strong>Coca cola light</strong>
-                    <span>lorem ipsum</span>
-                    <button>Buy now</button>
-                </div>
-                <h4>€3.99</h4>
-            </li>
-            <li data-category="" data-price="">
-                <picture>
-                    <img src="../../assets/images/webshop/products/product-cola-zero-can.png" alt="">
-                </picture>
-                <div class="detail">
-                    <p class="icon">
-                        <span><i class="far fa-heart"></i></span>
-                        <span><i class="far fa-square"></i></span>
-                        <span><i class="fas fa-shopping-basket"></i></span>
-                    </p>
-                    <strong>Coca cola zero</strong>
-                    <span>lorem ipsum</span>
-                    <button>Buy now</button>
-                </div>
-                <h4>€3.99</h4>
-            </li>
-            <li data-category="" data-price="">
-                <picture>
-                    <img src="../../assets/images/webshop/products/product-fanta-can.png" alt="">
-                </picture>
-                <div class="detail">
-                    <p class="icon">
-                        <span><i class="far fa-heart"></i></span>
-                        <span><i class="far fa-square"></i></span>
-                        <span><i class="fas fa-shopping-basket"></i></span>
-                    </p>
-                    <strong>Fanta</strong>
-                    <span>lorem ipsum</span>
-                    <button>Buy now</button>
-                </div>
-                <h4>€3.50</h4>
-            </li>
-            <li data-category="" data-price="">
-                <picture>
-                    <img src="../../assets/images/webshop/products/product-fanta-exotic-can.png" alt="">
-                </picture>
-                <div class="detail">
-                    <p class="icon">
-                        <span><i class="far fa-heart"></i></span>
-                        <span><i class="far fa-square"></i></span>
-                        <span><i class="fas fa-shopping-basket"></i></span>
-                    </p>
-                    <strong>Fanta exotic</strong>
-                    <span>lorem ipsum</span>
-                    <button>Buy now</button>
-                </div>
-                <h4>€4.50</h4>
-            </li>
-            <li data-category="" data-price="">
-                <picture>
-                    <img src="../../assets/images/webshop/products/product-ice-tea-green-can.png" alt="">
-                </picture>
-                <div class="detail">
-                    <p class="icon">
-                        <span><i class="far fa-heart"></i></span>
-                        <span><i class="far fa-square"></i></span>
-                        <span><i class="fas fa-shopping-basket"></i></span>
-                    </p>
-                    <strong>Ice-tea green</strong>
-                    <span>lorem ipsum</span>
-                    <button>Buy now</button>
-                </div>
-                <h4>€3.50</h4>
-            </li>
-            <li data-category="" data-price="">
-                <picture>
-                    <img src="../../assets/images/webshop/products/product-1.png" alt="">
-                </picture>
-                <div class="detail">
-                    <p class="icon">
-                        <span><i class="far fa-heart"></i></span>
-                        <span><i class="far fa-square"></i></span>
-                        <span><i class="fas fa-shopping-basket"></i></span>
-                    </p>
-                    <strong>L'Oréal paris</strong>
-                    <span>lorem ipsum</span>
-                    <button>Buy now</button>
-                </div>
-                <h4>€9.95</h4>
-            </li>
-            <li data-category="" data-price="">
-                <picture>
-                    <img src="../../assets/images/webshop/products/product-2.png" alt="">
-                </picture>
-                <div class="detail">
-                    <p class="icon">
-                        <span><i class="far fa-heart"></i></span>
-                        <span><i class="far fa-square"></i></span>
-                        <span><i class="fas fa-shopping-basket"></i></span>
-                    </p>
-                    <strong>Rolex</strong>
-                    <span>lorem ipsum</span>
-                    <button>Buy now</button>
-                </div>
-                <h4>€8.99</h4>
-            </li>
-            <li data-category="" data-price="">
-                <picture>
-                    <img src="../../assets/images/webshop/products/product-spa-bottle.png" alt="">
-                </picture>
-                <div class="detail">
-                    <p class="icon">
-                        <span><i class="far fa-heart"></i></span>
-                        <span><i class="far fa-square"></i></span>
-                        <span><i class="fas fa-shopping-basket"></i></span>
-                    </p>
-                    <strong>Spa</strong>
-                    <span>lorem ipsum</span>
-                    <button>Buy now</button>
-                </div>
-                <h4>€2.99</h4>
-            </li>
-        </ul>
-    </div> -->
 </div>
 
 <script src="../js/webshop.js"></script>
