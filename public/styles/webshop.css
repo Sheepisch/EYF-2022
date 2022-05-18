@@ -24,7 +24,6 @@
     text-align: center;
     font-size: larger;
     justify-content: center;
-    float: right;
 }
 
 nav ul {
@@ -84,6 +83,7 @@ a {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin-top: -100px;
 }
 .product-field ul li {
     width: 28%;
@@ -92,7 +92,7 @@ a {
     background: whitesmoke;
     border-radius: 20px;
     padding: 10px;
-    margin: 200px 10px 0 10px;
+    margin: 300px 10px 0 10px;
     position: relative;
     list-style: none;
 }

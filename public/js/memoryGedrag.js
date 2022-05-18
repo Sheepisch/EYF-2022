@@ -133,7 +133,7 @@ function placeCards (cardNamesArray) {
     let count = 0;
     for (let i = 0 ; i < cardNamesArray.length ; i++) {
 
-        frontCards[count].src = "../../../assets/images/gamesImages/memory/" + cardNamesArray[count];
+        frontCards[count].src = "../assets/images/gamesImages/memory/" + cardNamesArray[count];
         // Set the class name to "card front" for a restart
         frontCards[count].className = "card front";
         // hide the front for all the cards
