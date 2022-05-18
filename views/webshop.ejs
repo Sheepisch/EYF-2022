@@ -46,8 +46,36 @@
             </div>
         </nav>
     </div>
-
     <div class="product-field">
+        <ul class="items">
+            <% if (products.length > 0) { %>
+                <% products.forEach(product => { %>
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="<%= product.img %>" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong><%= product.name %></strong>
+                            <span><%= product.description %></span>
+                            <button>Buy now</button>
+                        </div>
+                        <h4><%= product.price %></h4>
+                    </li>
+                <% }) %>
+            <% } else { %>
+                <p>No products found</p>
+            <% } %>
+        </ul>
+    </div>
+
+
+
+    <!-- <div class="product-field">
         <ul class="items">
             <li data-category="" data-price="">
                 <picture>
@@ -194,7 +222,7 @@
                 <h4>€2.99</h4>
             </li>
         </ul>
-    </div>
+    </div> -->
 </div>
 
 <script src="../js/webshop.js"></script>
