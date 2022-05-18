@@ -96,3 +96,13 @@ function placeFood() {
     foodx = Math.floor(Math.random() * rows) * blockSize;
     foody = Math.floor(Math.random() * cols) * blockSize;
 }
+
+function restartGame(board) {
+    gameOver = false;
+    snakeX = blockSize * 5;
+    snakeY = blockSize * 5;
+    velocityX = 0;
+    velocityY = 0;
+    snakeBody = [];
+    placeFood();
+}
