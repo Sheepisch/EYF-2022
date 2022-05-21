@@ -1,24 +1,19 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Breakout Game </title>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Germania+One">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles/gameStyles/breakout.css" type="text/css">
+    <link rel="stylesheet" href="public/styles/gamesStyle.css" type="text/css">
+    <link rel="stylesheet" href="public/styles/subPageStyle.css" type="text/css">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+    <script src="public/js/breakout.js"></script>
+    <title> Tulip Air Breakout Game </title>
 </head>
+
 <body>
-<div class="sound">
-    <img class= "sound on" src="../../../assets/images/gamesImages/imgBreakout/SOUND_ON.png" alt="" id="sound">
-</div>
+<h1 id="score">0</h1>
+<div class="grid"></div>
 
-<div id="gameover">
-    <img src="../../../assets/images/gamesImages/imgBreakout/youwon.png" alt="" id="youwon">
-    <img src="../../../assets/images/gamesImages/imgBreakout/gameover.png" alt="" id="youlose">
-    <div id="restart">Play Again!</div>
-</div>
-
-<canvas id="breakout" width="400" height="500"></canvas>
-
-<script src="breakoutComponents.js"></script>
-<script src="breakoutStyle.css"></script>
 </body>
 </html>
