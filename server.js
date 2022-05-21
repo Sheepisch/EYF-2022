@@ -5,6 +5,7 @@ const webshopRouter = require('./public/routes/webshop')
 const earthRouter = require('./public/routes/earth_page')
 const gamesRouter = require('./public/routes/gamesHomepage')
 const weatherRouter = require('./public/routes/weather')
+const mediaRouter = require('./public/routes/media')
 
 const connection = require('./db_config')
 
@@ -14,6 +15,7 @@ app.use('/webshop', webshopRouter)
 app.use('/earth', earthRouter)
 app.use('/games', gamesRouter)
 app.use('/weather', weatherRouter)
+app.use('/media', mediaRouter)
 
 app.listen(3000, function() {
     connection.connect(function(err) {
