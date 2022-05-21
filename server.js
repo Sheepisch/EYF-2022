@@ -12,6 +12,8 @@ const connection = require('./db_config')
 
 app.set('view engine', 'ejs')
 
+app.use(express.urlencoded({ extended: false }));
+
 app.use('/webshop', webshopRouter)
 app.use('/earth', earthRouter)
 app.use('/games', gamesRouter)

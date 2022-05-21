@@ -62,20 +62,23 @@
                     <p>No products found</p>
                 <% } %>
             </div>
-
+            
             <div class="add tabshow">
-                <h1>Add product</h1>
-                <h2>name</h2>
-                <input type="text" class="input" value="">
-                <h2>category</h2>
-                <input type="text" class="input" value="">
-                <h2>description</h2>
-                <input type="text" class="input" value="">
-                <h2>price</h2>
-                <input type="text" class="input" value="">
-                <h2>img</h2>
-                <input type="text" class="input" value="">
-                <button class="btn">ADD</button>
+                <form action="/admin/add_product" method="POST">
+                    <h1>Add product</h1>
+                    <h2>name</h2>
+                    <input type="text" name="name" class="input" value="">
+                    <h2>category</h2>
+                    <input type="text" name="category" class="input" value="">
+                    <h2>description</h2>
+                    <input type="text" name="description" class="input" value="">
+                    <h2>price</h2>
+                    <input type="text" name="price" class="input" value="">
+                    <h2>img</h2>
+                    <input type="text" name="img" class="input" value="">
+                    
+                    <button type="submit" class="btn">ADD</button>
+                </form>
             </div>
 
             <% products.forEach(product => { %>

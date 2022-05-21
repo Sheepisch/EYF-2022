@@ -3,12 +3,10 @@ const router = express.Router()
 const mysql = require('../../db_config')
 
 router.get('/', (req, res) => {
-
     mysql.query('SELECT * FROM product', (err, results) => {
         if (err) throw err
         res.render('webshop', {products: results})
     })
-
 })
 
 module.exports = router
