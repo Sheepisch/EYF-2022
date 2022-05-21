@@ -5,6 +5,7 @@ const webshopRouter = require('./public/routes/webshop')
 const earthRouter = require('./public/routes/earth_page')
 const gamesRouter = require('./public/routes/gamesHomepage')
 const weatherRouter = require('./public/routes/weather')
+const captiveportalRouter = require('./public/routes/CaptivePortal')
 
 const connection = require('./db_config')
 
@@ -14,6 +15,7 @@ app.use('/webshop', webshopRouter)
 app.use('/earth', earthRouter)
 app.use('/games', gamesRouter)
 app.use('/weather', weatherRouter)
+app.use('/captiveportal', captiveportalRouter)
 
 app.listen(3000, function() {
     connection.connect(function(err) {
@@ -22,6 +24,7 @@ app.listen(3000, function() {
     })
 })
 
+// app.listen(3000)
 app.get('/', function(req, res) {
     res.render('index')
 })
