@@ -11,9 +11,10 @@ Instructions:
 ...
 
 install node from browser..
+install nodemon -> npm i nodemon
 
 Start server -> npm run devStart
-install nodemon -> npm i nodemon
+
 Link landingpage -> localhost:3000/earth
 
 configure DB connectie: 
