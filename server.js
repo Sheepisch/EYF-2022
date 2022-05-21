@@ -6,6 +6,7 @@ const earthRouter = require('./public/routes/earth_page')
 const gamesRouter = require('./public/routes/gamesHomepage')
 const weatherRouter = require('./public/routes/weather')
 const mediaRouter = require('./public/routes/media')
+const adminRouter = require('./public/routes/admin')
 
 const connection = require('./db_config')
 
@@ -16,6 +17,7 @@ app.use('/earth', earthRouter)
 app.use('/games', gamesRouter)
 app.use('/weather', weatherRouter)
 app.use('/media', mediaRouter)
+app.use('/admin', adminRouter);
 
 app.listen(3000, function() {
     connection.connect(function(err) {

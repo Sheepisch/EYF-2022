@@ -85,5 +85,9 @@ header {
     height: auto;
     text-align: center;
 }
+
+.beheerIcon {
+    font-size: 25px !important;
+}
 /* Einde svg gedeelte met knoppen en afbeelding */
 
