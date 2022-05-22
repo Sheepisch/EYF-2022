@@ -24,12 +24,6 @@ router.post('/add_product', (req, res) => {
 });
 
 router.get('/delete_product/:id', (req, res) => {
-    const id = req.params.id;
-
-    mysql.query('DELETE FROM product WHERE id = ?', [id], (err, results) => {
-        if (err) throw err
-        res.redirect('/admin');
-    })
 })
 
 router.delete('/delete_product/:product_id', (req, res) => {
