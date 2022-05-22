@@ -25,6 +25,17 @@
         <canvas id="board"></canvas>
     </div>
 
+    <div id="startGame">
+        <img id="keys" src="../assets/images/gamesImages/keys.png" alt="">
+        <img id="hand" src="../assets/images/gamesImages/hand.ico" alt="">
+    </div>
+
+    <div id="winScreen">
+        <span id="winText">You lose</span>
+        <br>
+        <button id="restartButton" onclick="restartGame('board')">Restart</button>
+    </div>
+
     <div class="sideButton" onclick="restartGame('board')">Restart game</div>
 </body>
 <script src="../js/snake.js"></script>

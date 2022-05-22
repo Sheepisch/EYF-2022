@@ -4,3 +4,36 @@
     display: block;
     background-image: url("../../../../public/assets/images/globe.png");
 }
+
+#startGame{
+    width: 100px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 2vh solid rgba(135, 171, 126, 1);
+    border-radius: 2vh;
+
+    position: fixed;
+    z-index: 1;
+    display: none;
+
+    text-align: center;
+    align-items: center;
+    top: 25%;
+    right: 45%;
+    padding: 90px 0 0 0;
+    font-size: 32px;
+    opacity: 0.5;
+}
+
+#startGame img{
+    height: 70px;
+    position: absolute;
+    top: 35%;
+    right: 1%;
+}
+
+#startGame #keys {
+    position: absolute;
+    top: -10%;
+    right: 20%;
+}

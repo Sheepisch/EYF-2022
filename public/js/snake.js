@@ -3,6 +3,7 @@ const blockSize = 20;
 const rows = 20;
 const cols = 20;
 const context = board.getContext('2d');
+const startGame = document.getElementById('startGame');
 
 // snake
 let snakeX = blockSize * 5;
@@ -24,10 +25,16 @@ window.onload = function() {
     placeFood();
     document.addEventListener("keydown", changeDirection);
 
+    startGame.style.display = "block";
+    document.addEventListener("keydown", changeDirection => {
+            startGame.style.display = "none";
+    });
+
     setInterval(update, 100);
 }
 
 function update() {
+
     if (gameOver) {
         return;
     }
@@ -63,13 +70,16 @@ function update() {
     // gameover conditions
     if (snakeX < 0 || snakeX > board.width - blockSize || snakeY < 0 || snakeY > board.height - blockSize) {
         gameOver = true;
-        alert("game Over");
+        let winScreen = document.getElementById("winScreen");
+        winScreen.style.display = "block";
     }
 
     for (let i = 1; i < snakeBody.length; i++) {
         if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOver = true;
-            alert("game Over");
+            if (winScreen.style.display === "block") {
+                winScreen.style.display = "none";
+            }
         }
     }
 }
@@ -104,5 +114,13 @@ function restartGame(board) {
     velocityX = 0;
     velocityY = 0;
     snakeBody = [];
+    if (winScreen.style.display === "block") {
+        winScreen.style.display = "none";
+    }
+
+    startGame.style.display = "block";
+    document.addEventListener("keyup", changeDirection => {
+            startGame.style.display = "none";
+    });
     placeFood();
 }
