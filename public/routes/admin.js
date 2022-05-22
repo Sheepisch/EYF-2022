@@ -23,8 +23,25 @@ router.post('/add_product', (req, res) => {
     })
 });
 
-router.get('/delete_product/:id', (req, res) => {
+router.get('/delete_product/:product_id', (req, res) => {
 })
+
+router.get('/update_product/:product_id', (req, res) => {
+})
+
+router.put('/update_product/:product_id', (req, res) => {
+    const product_id = req.params.product_id;
+    const name = req.body.name;
+    const category = req.body.category;
+    const price = req.body.price;
+    const description = req.body.description;
+    const img = req.body.img;
+
+    mysql.query('UPDATE product SET name = ?, category = ?, price = ?, description = ?, img = ? WHERE product_id = ?', [name, category, price, description, img, product_id], (err, results) => {
+        if (err) throw err
+        res.redirect('/admin');
+    })
+});
 
 router.delete('/delete_product/:product_id', (req, res) => {
     const product_id = req.params.product_id;
