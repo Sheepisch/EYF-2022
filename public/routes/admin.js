@@ -1,4 +1,5 @@
 const express = require('express')
+const { redirect } = require('express/lib/response')
 const router = express.Router()
 const mysql = require('../../db_config')
 
@@ -9,7 +10,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.post('/add_product', async (req, res) => {
+router.post('/add_product', (req, res) => {
     const name = req.body.name;
     const category = req.body.category;
     const price = req.body.price;
@@ -18,8 +19,27 @@ router.post('/add_product', async (req, res) => {
 
     mysql.query('INSERT INTO product (name, category, price, description, img) VALUES (?, ?, ?, ?, ?)', [name, category, price, description, img], (err, results) => {
         if (err) throw err
-        res.redirect('/');
+        res.redirect('/admin');
     })
+});
+
+router.get('/delete_product/:id', (req, res) => {
+    const id = req.params.id;
+
+    mysql.query('DELETE FROM product WHERE id = ?', [id], (err, results) => {
+        if (err) throw err
+        res.redirect('/admin');
+    })
+})
+
+router.delete('/delete_product/:product_id', (req, res) => {
+    const product_id = req.params.product_id;
+    try {
+        mysql.query('DELETE FROM product WHERE product_id = ?', [product_id]);
+        res.redirect('/admin');
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 module.exports = router

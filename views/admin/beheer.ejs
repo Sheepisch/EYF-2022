@@ -54,7 +54,9 @@
                                 <a onclick="showTab(3)">
                                     <i class="fa fa-refresh update"></i>
                                 </a>
-                                <i class="fa-solid fa-x delete"></i>
+                                <form action="admin/delete_product/<%= product.product_id %>?_method=DELETE" method="POST">
+                                    <button type="submit"><i class="fa-solid fa-x delete"></i></button>
+                                </form>
                             </div>
                         </div>
                     <% }) %>

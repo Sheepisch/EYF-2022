@@ -8,4 +8,4 @@ function showTab(panelIndex) {
     tab[panelIndex].style.display = "block";
 }
 
-showTab(1);
+showTab(0);

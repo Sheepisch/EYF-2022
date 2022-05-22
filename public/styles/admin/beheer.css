@@ -127,17 +127,31 @@ h2 {
 }
 
 .product .icons {
-    letter-spacing: 5px;
+    letter-spacing: 20px;
     margin-left: 65%;
     float: right;
+    display: flex;
 }
 
 .delete {
     color: red;
     cursor: pointer;
+    padding: 0px;
+    margin-top: -5px;
 }
 
-.update {
+.delete:hover {
+    color: rgb(132, 0, 0)
+}
+
+.update:hover {
     color: #10ac84;
     cursor: pointer;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
 }
