@@ -25,7 +25,7 @@ router.use(passport.session())
 // quick fix for login without db
 const users = [];
 
-router.get('/', (req, res) => {
+router.get('/', checkAuthenticated, (req, res) => {
     mysql.query('SELECT * FROM product', (err, results) => {
         if (err) throw err
         res.render('admin/beheer', {products: results})
@@ -75,24 +75,24 @@ router.delete('/delete_product/:product_id', (req, res) => {
     }
 });
 
-router.get('/login', (req, res) => {
+router.get('/login',checkNotAuthenticated, (req, res) => {
     res.render('admin/login');
 });
 
-router.get('/register', (req, res) => {
+router.get('/register',checkNotAuthenticated,  (req, res) => {
     res.render('admin/register');
 });
 
-router.post('/login', passport.authenticate('local', {
+router.post('/login',checkNotAuthenticated,  passport.authenticate('local', {
     successRedirect: '/admin',
     failureRedirect: '/admin/login',
     failureFlash: true
 }));
 
-router.get('/register', (req, res) => {
-    });
+router.get('/register',checkNotAuthenticated, (req, res) => {
+});
 
-router.post('/register', async (req, res) => {
+router.post('/register', checkNotAuthenticated, async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
         users.push({
@@ -107,5 +107,20 @@ router.post('/register', async (req, res) => {
         res.redirect('/admin/register');
     }
 });
+
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+
+    res.redirect('/admin/login');
+}
+
+function checkNotAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return res.redirect('/admin');
+    }
+    next();
+}
 
 module.exports = router
