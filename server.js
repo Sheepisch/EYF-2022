@@ -6,7 +6,7 @@ const earthRouter = require('./public/routes/earth_page')
 const gamesRouter = require('./public/routes/gamesHomepage')
 const weatherRouter = require('./public/routes/weather')
 const mediaRouter = require('./public/routes/media')
-const adminRouter = require('./public/routes/admin')
+const adminRouter = require('./public/routes/beheer/admin')
 
 const connection = require('./db_config')
 const methodOverride = require('method-override')

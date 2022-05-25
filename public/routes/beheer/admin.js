@@ -1,7 +1,29 @@
 const express = require('express')
-const { redirect } = require('express/lib/response')
 const router = express.Router()
-const mysql = require('../../db_config')
+const mysql = require('../../../db_config')
+const bcrypt = require('bcrypt')
+const flash = require('express-flash')
+const session = require('express-session')
+
+const passport = require('passport')
+const initializePassport = require('./passport-config')
+initializePassport(passport, 
+    username => users.find(user => user.username === username),
+    id => users.find(user => user.id === id)
+)
+
+router.use(express.urlencoded({ extended: false }))
+router.use(flash())
+router.use(session({
+    secret: 'secret',
+    resave: false,
+    saveUninitialized: false
+}))
+router.use(passport.initialize())
+router.use(passport.session())
+
+// quick fix for login without db
+const users = [];
 
 router.get('/', (req, res) => {
     mysql.query('SELECT * FROM product', (err, results) => {
@@ -50,6 +72,39 @@ router.delete('/delete_product/:product_id', (req, res) => {
         res.redirect('/admin');
     } catch (error) {
         console.log(error);
+    }
+});
+
+router.get('/login', (req, res) => {
+    res.render('admin/login');
+});
+
+router.get('/register', (req, res) => {
+    res.render('admin/register');
+});
+
+router.post('/login', passport.authenticate('local', {
+    successRedirect: '/admin',
+    failureRedirect: '/admin/login',
+    failureFlash: true
+}));
+
+router.get('/register', (req, res) => {
+    });
+
+router.post('/register', async (req, res) => {
+    try {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+        users.push({
+            id: Date.now().toString(),
+            username: req.body.username,
+            password: hashedPassword
+        });
+        
+        res.redirect('/admin/login');
+    }
+    catch {
+        res.redirect('/admin/register');
     }
 });
 
