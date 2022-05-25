@@ -108,6 +108,15 @@ router.post('/register', checkNotAuthenticated, async (req, res) => {
     }
 });
 
+router.delete('/logout', (req, res) => {
+    req.logout(function(error) {
+        if(error) {
+            return next(error);
+        }
+        res.redirect('/admin/login');
+    });
+});
+
 function checkAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
