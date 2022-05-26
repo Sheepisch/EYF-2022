@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tulip Chatroom</title>
+    <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
+    <link href="../styles/chatboxStyle.css" rel="stylesheet" type="text/css">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+    <script src="/chatboxGedrag.js"></script>
+</head>
+<body>
+<div class="upperMenu header">
+    <s class="title">Tulip Air Chat Room</s>
+    <button class="upperMenuButton" id="settings"><i class="fa-solid fa-sliders fa-xs"></i></button>
+    <button id="back" class="upperMenuButton"><a href="/">
+            <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
+</div>
+
+<div class="content">
+    <table id="chat-panel">
+        <tr>
+            <div id="chat-output"></div>
+            <div id="chat-notification"></div>
+        </tr>
+        <tr>
+            <td>User name:</td>
+            <td><input id="chat-user" type="text"></td>
+        </tr>
+        <tr>
+            <td>Message:</td>
+            <td><textarea height="50"
+                          id="chat-message" width="300"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button id="chat-send">Send</button>
+            </td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>
