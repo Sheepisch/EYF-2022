@@ -1,0 +1,74 @@
+.content {
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 2px 5px 20px rgba(119,119,119,0.5);
+    text-align: center;
+}
+
+.rightbox {
+    width: 60%;
+    margin: auto;
+}
+
+h1 {
+    color: #7ed386;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: rgb(83, 83, 83);
+    text-transform: uppercase;
+    font-size: .7em;
+    letter-spacing: 1px;
+    margin-right: 38em;
+    margin-top: 20px;
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid #3fb6a8;
+    width: 60%;
+    font-size: .7em;
+    padding: 7px 0;
+    color: #070707;
+    outline: none;
+    padding-left: 7px;
+}
+
+.btn {
+    text-transform: uppercase;
+    border: 0;
+    color: #fff;
+    background: #7ed386;
+    padding: 12px 30px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,.2);
+    cursor: pointer;
+    margin: 50px 26em;
+}
+
+.btn-add {
+    text-transform: uppercase;
+    border: 0;
+    color: #fff;
+    background: #7ed386;
+    padding: 7px 15px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,.2);
+    cursor: pointer;
+    margin: -65px 140px;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 1.2em;
+    font-weight: 800;
+}

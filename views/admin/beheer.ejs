@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../styles/admin/beheer.css">
+    
 
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
 
@@ -23,10 +24,17 @@
         <div class="leftbox">
             <nav>
                 <a onclick="showTab(0)" class="tab active">
-                    <li class="fa fa-user"></li>
+                    <i class="fa fa-user"></i>
                 </a>
                 <a onclick="showTab(1)" class="tab">
                     <i class="fa-solid fa-store"></i>
+                </a>
+                <a class="tab" href="#">
+                    <form action="/admin/logout?_method=DELETE" method="POST">
+                        <button class="logoutButton" type="submit">
+                            <i class="fa-solid fa-sign-out-alt"></i>
+                        </button>
+                    </form>
                 </a>
             </nav>
         </div>

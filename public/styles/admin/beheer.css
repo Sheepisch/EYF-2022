@@ -2,17 +2,16 @@
     height: 750px;
     margin: 0 auto;
     position: relative;
-    top: 20px;
     box-shadow: 2px 5px 20px rgba(119,119,119,0.5);
 }
 
 .leftbox {
     float: left;
-    top: -3%;
+    top: -.7%;
     left: 5%;
     position: absolute;
     width: 15%;
-    height: 105%; 
+    height: 100%; 
     background: #2ed573;
     box-shadow: 3px 3px 10px rgba(119,119,119,0.5);
     border: .1em solid #fff;
@@ -24,13 +23,28 @@ nav a {
     margin: 5% 32%;
     padding:  35px 20px;
     color: #fff;
-    font-size: 1.5em;
     display: block;
     transition: all .3s ease-in-out;
     font-size: 2.5em;
 }
 
+nav a form button i{
+    list-style: none;
+    color: #fff;
+    display: block;
+    transition: all .3s ease-in-out;
+    font-size: 2.8em;
+    transform: rotate(180deg);
+    margin-top: 18em;
+}
+
 nav a:hover {
+    color: #10ac84;
+    cursor: pointer;
+    transition: scale(1.2);
+}
+
+nav a form button i:hover {
     color: #10ac84;
     cursor: pointer;
     transition: scale(1.2);
