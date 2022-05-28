@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const appPort = 3000;
 
 const webshopRouter = require('./public/routes/webshop')
 const earthRouter = require('./public/routes/earth_page')
@@ -7,6 +8,7 @@ const gamesRouter = require('./public/routes/gamesHomepage')
 const weatherRouter = require('./public/routes/weather')
 const mediaRouter = require('./public/routes/media')
 const adminRouter = require('./public/routes/beheer/admin')
+const chatRouter = require('./public/routes/chatbox')
 
 const connection = require('./db_config')
 const methodOverride = require('method-override')
@@ -21,9 +23,10 @@ app.use('/earth', earthRouter)
 app.use('/games', gamesRouter)
 app.use('/weather', weatherRouter)
 app.use('/media', mediaRouter)
-app.use('/admin', adminRouter);
+app.use('/admin', adminRouter)
+app.use('/chatBox', chatRouter);
 
-app.listen(3000, function() {
+app.listen(appPort, function() {
     connection.connect(function(err) {
         if (err) throw err
         console.log('database connected!')

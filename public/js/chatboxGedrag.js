@@ -1,4 +1,4 @@
-const socket = io();
+let socket = io();
 
 const chatOutput = document.getElementById('chat-output');
 const chatNotification = document.getElementById('chat-notification');
