@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const appPort = 3000;
+const socket = require('socket.io');
+
 
 const webshopRouter = require('./public/routes/webshop')
 const earthRouter = require('./public/routes/earth_page')
@@ -26,7 +28,7 @@ app.use('/media', mediaRouter)
 app.use('/admin', adminRouter)
 app.use('/chatBox', chatRouter);
 
-app.listen(appPort, function() {
+const server = app.listen(appPort, function() {
     connection.connect(function(err) {
         if (err) throw err
         console.log('database connected!')
@@ -38,3 +40,16 @@ app.get('/', function(req, res) {
 })
 
 app.use(express.static(__dirname + '/public'))
+
+const io = socket(server);
+io.on('connection',function(socket){
+    console.log('socket connected id=', socket.id);
+
+    socket.on('message', function(data){
+        io.sockets.emit('message', data);
+    });
+
+    socket.on('eyf_typing', function(data){
+        socket.broadcast.emit('eyf_typing', data);
+    });
+});

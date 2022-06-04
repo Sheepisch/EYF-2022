@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Tulip Chatroom</title>
-    <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
-    <link href="../styles/chatboxStyle.css" rel="stylesheet" type="text/css">
-    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+<!--    <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">-->
+<!--    <link href="../styles/chatboxStyle.css" rel="stylesheet" type="text/css">-->
+<!--    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="../js/chatboxGedrag.js"></script>
+
+<!--    <script src="../js/chatApp.js"></script>-->
 </head>
 <body>
 <div class="upperMenu header">
@@ -28,17 +31,14 @@
         </tr>
         <tr>
             <td>Message:</td>
-            <td><textarea height="50"
-                          id="chat-message" width="300"></textarea></td>
+            <td><textarea id="chat-message"
+                          width="300" height="50"></textarea></td>
         </tr>
         <tr>
             <td></td>
-            <td>
-                <button id="chat-send">Send</button>
-            </td>
+            <td><button id="send">Send</button></td>
         </tr>
     </table>
-
 </div>
 </body>
 </html>
