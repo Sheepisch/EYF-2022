@@ -3,7 +3,7 @@ canvas.width = 500;
 canvas.height = 500
 
 const {width, height} =canvas;
-const FPS 20;
+//const FPS 20;
 ctx = canvas.getContext('2d');
 
 
