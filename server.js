@@ -11,6 +11,7 @@ const weatherRouter = require('./public/routes/weather')
 const mediaRouter = require('./public/routes/media')
 const adminRouter = require('./public/routes/beheer/admin')
 const chatRouter = require('./public/routes/chatbox')
+const CaptivePortalRouter = require('./public/routes/CaptivePortal')
 
 const connection = require('./db_config')
 const methodOverride = require('method-override')
@@ -26,7 +27,8 @@ app.use('/games', gamesRouter)
 app.use('/weather', weatherRouter)
 app.use('/media', mediaRouter)
 app.use('/admin', adminRouter)
-app.use('/chatBox', chatRouter);
+app.use('/chatBox', chatRouter)
+app.use('/CaptivePortal',CaptivePortalRouter);
 
 const server = app.listen(appPort, function() {
     connection.connect(function(err) {
