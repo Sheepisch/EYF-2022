@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../styles/media.css">
 
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+    <script src="../js/mediaGedrag.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/BrowserFS/2.0.0/browserfs.js"></script>
+
     <title>Movie theater</title>
 </head>
 <body>
@@ -19,18 +19,32 @@
             <i class="fa-solid fa-reply fa-xs"></i></a></button>
 </div>
 
-<div class="content">
-    <div class="videoHolder" >
-        <video class="video">
+<div class="content" id="videoContent">
+    <div class="videoHolder">
+        <video class="video" id="player">
             <source src="/../../assets/video/bigAd.mp4" type="video/mp4">
         </video>
         <div class="controls">
-            <div class="controlBar"></div>
-            <div class="buttons">
-                <button id="playPause"></button>
+            <button class="controlButton leftButton" id="playPause" onclick="togglePlay(this,'player')">
+                <i class="fa-solid fa-play-circle"></i>
+            </button>
+            <button class="controlButton leftButton" id="sound" onclick="toggleMute(this,'player')">
+                <i class="fa-solid fa-volume-mute"></i>
+            </button>
+            <div class="time">
+                <time id="time-elapsed">00:00</time>
+                <span> / </span>
+                <time id="duration">00:00</time>
             </div>
+            <button class="controlButton" id="fullScreen" onclick="toggleFullScreen('videoContent',this)">
+                <i class="fa-solid fa-expand-arrows-alt"></i>
+            </button>
         </div>
     </div>
+</div>
+
+<button onclick="getVideos()"></button>
+
 </div>
 
 </body>

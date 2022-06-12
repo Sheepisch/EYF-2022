@@ -1,35 +1,33 @@
-.video {
-    width: 100%;
+.content {
+    /*text-align: center;*/
+    background: black;
 }
-
 .videoHolder {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
+    width: 90%;
+    /*max-width: 800px;*/
 }
-
+.video {
+    width: 90%;
+    max-height: 90vh;
+    /*max-width: 800px;*/
+}
 .controls {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    flex-wrap: wrap;
-    background-color: rgba(50, 50, 50, 0.7);
+    background: #2e3246;
+    width: 90%;
+    height: 35px;
+    margin: 0;
+}
+.controlButton{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+}
+.leftButton{
+    float: left;
+    font-size: 20px;
+    color: #2e3246;
 }
 
-.buttons button {
-    background: none;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-}
-.buttons button:before{
-    content: "\f144";
-    font-family: "Font Awesome 5 free";
-    width: 30px;
-    height: 30px;
+.time {
     display: inline-block;
-    font-size: 28px;
-    color: white;
-    -webkit-font-smoothing: antialiased;
 }

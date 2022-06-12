@@ -23,6 +23,7 @@ socket.on('message', data => {
         msg.innerHTML = `<span>${data.name}: ${data.msg}</span>`;
         msg.className = 'right-msg';
     } else {
+        msg.innerHTML = `<span>${data.name}: ${data.msg}</span>`;
         msg.className = 'left-msg';
     }
     document.querySelector('.messages').appendChild(msg);
