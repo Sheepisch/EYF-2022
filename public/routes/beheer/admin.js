@@ -58,12 +58,27 @@ router.put('/update_product/:product_id', (req, res) => {
     const price = req.body.price;
     const description = req.body.description;
     const img = req.body.img;
+   
+    try {
+        mysql.query('UPDATE product SET name = ?, category = ?, price = ?, description = ?, img = ? WHERE product_id = ?', [name, category, price, description, img, product_id], (err, results) => {
+            if (err) throw err
+            res.redirect('/admin');
+        }) 
+    }catch (err) {
+        console.log(err);
+    }
 
-    mysql.query('UPDATE product SET name = ?, category = ?, price = ?, description = ?, img = ? WHERE product_id = ?', [name, category, price, description, img, product_id], (err, results) => {
-        if (err) throw err
-        res.redirect('/admin');
-    })
 });
+
+router.get('/getProduct/:product_id', (req, res) => {
+    const product_id = req.params.product_id;
+    mysql.query('SELECT * FROM product WHERE product_id = ?', [product_id], (err, results) => {
+        if (err) throw err
+        res.render('admin/update_product', {product: results[0]})
+    });
+    console.log(product_id);
+});
+
 
 router.delete('/delete_product/:product_id', (req, res) => {
     const product_id = req.params.product_id;

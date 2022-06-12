@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="../../styles/subPageStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../styles/admin/beheer.css">
+
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+</head>
+<body>
+    <div class="upperMenu header">
+        <s>Management</s>
+        <button id="settings" class="upperMenuButton"><i class="fa-solid fa-sliders fa-xs"></i></button>
+        <button id="terug" class="upperMenuButton"><a href="/">
+        <i class="fa-solid fa-reply fa-xs"></i></a></button>
+    </div>
+
+    <div class="content">
+        <div class="leftbox">
+            <nav>
+                <a href="/admin" class="tab active">
+                    <i class="fa fa-user"></i>
+                </a>
+                <a href="/admin" class="tab">
+                    <i class="fa-solid fa-store"></i>
+                </a>
+                <a class="tab" href="#">
+                    <form action="/admin/logout?_method=DELETE" method="POST">
+                        <button class="logoutButton" type="submit">
+                            <i class="fa-solid fa-sign-out-alt"></i>
+                        </button>
+                    </form>
+                </a>
+            </nav>
+        </div>
+
+        <div class="rightbox">
+            <form action="../../admin/update_product/<%= product.product_id %>?_method=PUT" method="POST">
+                <div class="update tabshow">
+                    <h1>Update product</h1>
+                    <h2>name</h2>
+                    <input type="text" name="name" class="input" value="<%=product.name%>">
+                    <h2>category</h2>
+                    <input type="text" name="category" class="input" value="<%=product.category%>">
+                    <h2>description</h2>
+                    <input type="text" name="description" class="input" value="<%=product.description%>">
+                    <h2>price</h2>
+                    <input type="text" name="price" class="input" value="<%=product.price%>">
+                    <h2>img</h2>
+                    <input type="text" name="img" class="input" value="<%=product.img%>">
+
+                    <button class="btn">UPDATE</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
