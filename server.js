@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
 const appPort = 3000;
-const socket = require('socket.io');
 
+const socket = require('socket.io');
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 
 const webshopRouter = require('./public/routes/webshop')
 const earthRouter = require('./public/routes/earth_page')
@@ -30,28 +32,30 @@ app.use('/admin', adminRouter)
 app.use('/chatBox', chatRouter)
 app.use('/CaptivePortal',CaptivePortalRouter);
 
-const server = app.listen(appPort, function() {
-    connection.connect(function(err) {
-        if (err) throw err
-        console.log('database connected!')
-    })
-})
-
 app.get('/', function(req, res) {
     res.render('index')
 })
 
 app.use(express.static(__dirname + '/public'))
 
-const io = socket(server);
-io.on('connection',function(socket){
-    console.log('socket connected id=', socket.id);
+io.on('connection', function(socket){
+    console.log('connected')
 
-    socket.on('message', function(data){
-        io.sockets.emit('message', data);
-    });
+    socket.on('New-client', message=>{
+        socket.broadcast.emit('client', message);
+    })
 
-    socket.on('eyf_typing', function(data){
-        socket.broadcast.emit('eyf_typing', data);
-    });
-});
+    socket.on('message', data => {
+        let name = data.name;
+        let message = data.message;
+
+        io.emit('message', data);
+    })
+}); 
+
+server.listen(appPort, function() {
+    connection.connect(function(err) {
+        if (err) throw err
+        console.log('database connected!')
+    })
+})

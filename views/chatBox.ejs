@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Tulip Chatroom</title>
-<!--    <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">-->
-<!--    <link href="../styles/chatboxStyle.css" rel="stylesheet" type="text/css">-->
-<!--    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>-->
+   <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
+   <link href="../styles/chatboxStyle.css" rel="stylesheet" type="text/css">
+   <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-    <script src="../js/chatboxGedrag.js"></script>
-
-<!--    <script src="../js/chatApp.js"></script>-->
+    <script src="../../js/chatboxGedrag.js"></script>
 </head>
 <body>
 <div class="upperMenu header">
@@ -20,25 +18,13 @@
 </div>
 
 <div class="content">
-    <table id="chat-panel">
-        <tr>
-            <div id="chat-output"></div>
-            <div id="chat-notification"></div>
-        </tr>
-        <tr>
-            <td>User name:</td>
-            <td><input id="chat-user" type="text"></td>
-        </tr>
-        <tr>
-            <td>Message:</td>
-            <td><textarea id="chat-message"
-                          width="300" height="50"></textarea></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button id="send">Send</button></td>
-        </tr>
-    </table>
+    <div class="center">
+        <p class="head">Join Room</p>
+    </div>
+    <div class="flex-center">
+        <input type="text" name="name" id="name" placeholder="Enter your name...">
+        <button onclick="join()">Join</button>
+    </div>
 </div>
 </body>
 </html>
