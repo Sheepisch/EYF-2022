@@ -18,12 +18,12 @@ socket.on('client', (message) => {
 socket.on('message', data => {
     let msg = document.createElement('div');
     msg.className = 'left-msg';
+    msg.innerHTML = `<span>${data.name}: ${data.msg}</span>`;
 
     if(data.name == localStorage.getItem('Name')){
-        msg.innerHTML = `<span>${data.name}: ${data.msg}</span>`;
         msg.className = 'right-msg';
+        msg.innerHTML = `<span>${data.msg}</span>`;
     } else {
-        msg.innerHTML = `<span>${data.name}: ${data.msg}</span>`;
         msg.className = 'left-msg';
     }
     document.querySelector('.messages').appendChild(msg);
