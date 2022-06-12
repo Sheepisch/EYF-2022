@@ -12,19 +12,15 @@ let toast = new Toast({
 });
 
 socket.on('client', (message) => {
-    toast.show(message, () => {});
+    toast.show(message);
 });
 
-socket.on('message', async data => {
-    // let messagesDiv = await document.querySelector('.messages')[0];
-
-    // messagesDiv.innerHTML += getHtml(data.name, data.msg);
-
+socket.on('message', data => {
     let msg = document.createElement('div');
     msg.className = 'left-msg';
-    msg.innerHTML = `<span>${data.name}: ${data.msg}</span>`;
-    console.log(localStorage.getItem('Name'))
+
     if(data.name == localStorage.getItem('Name')){
+        msg.innerHTML = `<span>${data.name}: ${data.msg}</span>`;
         msg.className = 'right-msg';
     } else {
         msg.className = 'left-msg';
@@ -39,14 +35,4 @@ function sendMessage() {
         'msg': msg,
     });
     msg = '';
-}
-
-function getHtml(name, msg) {
-    if (name == localStorage.getItem('Name')) {
-        return `<div class="right-msg">` + 
-            `<span>`+ msg + `</span></div>`;
-    } else {
-        return `<div class="left-msg">` + 
-            `<span><b>`+ name + `</b>: ` + msg + `</span></div>`;
-    }
 }
