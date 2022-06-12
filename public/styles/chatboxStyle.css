@@ -1,0 +1,30 @@
+.content {
+    height: 30em;
+}
+
+h1 {
+    margin-top: 2em;
+    text-align: center;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #3fb6a8;
+    width: 30%;
+    font-size: .7em;
+    padding: 7px 0;
+    color: #070707;
+    outline: none;
+    margin-top: 8em;
+    margin-left: 35%;
+    justify-content: center;
+}
+
+#btn {
+    position: absolute;
+    top: 45%;
+    left:46%;
+    width: 100px;
+    background-color: #7ed386;   
+    cursor: pointer;
+}

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Tulip Chatroom</title>
-   <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
-   <link href="../styles/chatboxStyle.css" rel="stylesheet" type="text/css">
-   <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+    <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
+    <link href="../styles/chatboxStyle.css" rel="stylesheet" type="text/css">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="../../js/chatboxGedrag.js"></script>
 </head>
@@ -14,16 +14,18 @@
     <s class="title">Tulip Air Chat Room</s>
     <button class="upperMenuButton" id="settings"><i class="fa-solid fa-sliders fa-xs"></i></button>
     <button id="back" class="upperMenuButton"><a href="/">
-            <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
+       <i class="fa-solid fa-reply fa-xs" style=""></i></a>
+    </button>
 </div>
 
 <div class="content">
-    <div class="center">
-        <p class="head">Join Room</p>
+    <div class="head">
+        <h1>Join Room</h1>
     </div>
-    <div class="flex-center">
+
+    <div class="input">
         <input type="text" name="name" id="name" placeholder="Enter your name...">
-        <button onclick="join()">Join</button>
+        <button id="btn" onclick="join()">Join</button>
     </div>
 </div>
 </body>
