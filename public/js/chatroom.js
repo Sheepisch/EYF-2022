@@ -8,7 +8,7 @@ socket.emit('new-client', name + 'has joined the chat');
 let toast = new Toast({
     type: 'info',
     duration: 5000,
-    animate: true
+    animate: true,
 });
 
 socket.on('New-client', (message) => {
@@ -38,3 +38,16 @@ function sendMessage() {
     document.getElementById('msg').value = '';
 }
 
+document.onkeydown = function (e) {
+    e = e || window.event;
+    switch (e.which || e.keyCode) {
+          case 13 : 
+          let msg = document.getElementById('msg').value;
+          socket.emit('message', {
+              'name': localStorage.getItem('Name'),
+              'msg': msg,
+          });
+          document.getElementById('msg').value = '';
+        break;
+    }
+}
