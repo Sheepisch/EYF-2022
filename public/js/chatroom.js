@@ -11,7 +11,7 @@ let toast = new Toast({
     animate: true
 });
 
-socket.on('client', (message) => {
+socket.on('New-client', (message) => {
     toast.show(message);
 });
 
@@ -35,5 +35,6 @@ function sendMessage() {
         'name': localStorage.getItem('Name'),
         'msg': msg,
     });
-    msg = '';
+    document.getElementById('msg').value = '';
 }
+
