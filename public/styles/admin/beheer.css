@@ -54,10 +54,6 @@ nav a:first-child {
     margin-top: 50px;
 }
 
-nav a.active {
-    color: #10ac84;
-}
-
 .rightbox {
     width: 60%;
     margin-left: 27%;
