@@ -11,7 +11,11 @@ const app = express();
 //     res.render('<h1>Hoi</h1>');
 // })
 router.get('/', ( req, res) => {
-    res.render('media');
+    // res.render('media');
+    fs.readdir(testFolder, (err, files) => {
+        res.render('media');
+    });
+console.log(testFolder);
 })
 
 // router.get('/', ( req, res) => {

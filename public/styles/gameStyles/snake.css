@@ -3,6 +3,7 @@
     margin: auto;
     display: block;
     background-image: url("../../../../public/assets/images/globe.png");
+    border: 1px solid black;
 }
 
 #startGame{
