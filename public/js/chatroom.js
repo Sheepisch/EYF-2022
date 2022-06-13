@@ -11,7 +11,7 @@ let toast = new Toast({
     animate: true,
 });
 
-socket.on('New-client', (message) => {
+socket.on('client', (message) => {
     toast.show(message);
 });
 
