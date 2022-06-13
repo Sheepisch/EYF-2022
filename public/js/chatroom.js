@@ -8,7 +8,7 @@ socket.emit('new-client', name + 'has joined the chat');
 let toast = new Toast({
     type: 'info',
     duration: 5000,
-    animate: true,
+    animate: true
 });
 
 socket.on('client', (message) => {
