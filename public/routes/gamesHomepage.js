@@ -20,5 +20,7 @@ router.get('/snake', (req, res) => {
 router.get('/hangman', (req, res) => {
     res.render('games/hangman')
 })
-
+router.get('/tetris', (req, res) => {
+    res.render('games/tetris')
+})
 module.exports = router
