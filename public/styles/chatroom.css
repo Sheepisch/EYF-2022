@@ -23,12 +23,13 @@ input[type='text']{
     margin-left: 3em;
 }
 .chatbtn{
-    width:120px;
-    height:35px;
+    width:95px;
+    height:32px;
     margin-right: 3.2em;
     margin-top: 3px;
     cursor: pointer;
-    background-color: #7ed386;
+    background-color: #39647c;
+    color: #FFFFFF;
 }
 
 .left-msg {
