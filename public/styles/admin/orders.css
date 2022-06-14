@@ -120,7 +120,7 @@ h2 {
     margin: -65px 140px;
 }
 
-.product{
+.orders{
     display: flex;
     border-bottom: 1px solid #3fb6a8;
     width: 80%;
@@ -129,22 +129,17 @@ h2 {
     margin-top: 15px;
 }
 
-.product:hover {
-    font-size: larger;
-}
-
-.product strong:hover {
+.orders strong:hover {
     color: #10ac84;
     cursor: pointer;
 }
 
-.product strong {
-    width: 150px;
+.orders strong {
+    width: 250px;
 }
 
-.product .icons {
+.orders .icons {
     letter-spacing: 20px;
-    margin-left: 65%;
     float: right;
     display: flex;
 }

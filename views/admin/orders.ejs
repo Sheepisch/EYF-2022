@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+
+    <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../styles/admin/orders.css">
+
+    <title>orders</title>
+</head>
+<body>
+    <div class="upperMenu header">
+        <s class="title">Orders</s>
+        <button id="settings" class="upperMenuButton"><i class="fa-solid fa-sliders fa-xs"></i></button>
+        <button id="terug" class="upperMenuButton"><a href="/">
+        <i class="fa-solid fa-reply fa-xs"></i></a></button>
+    </div>
+    
+    <div class="content">
+        <div class="leftbox">
+            <nav>
+                <a href="/admin" class="tab active">
+                    <i class="fa fa-user"></i>
+                </a>
+                <a href="/admin" class="tab">
+                    <i class="fa-solid fa-store"></i>
+                </a>
+                <a href="#">
+                    <form action="admin/getOrders" method="GET">
+                        <button type="submit">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </form>
+                </a>
+                <a class="tab" href="#">
+                    <form action="/admin/logout?_method=DELETE" method="POST">
+                        <button class="logoutButton" type="submit">
+                            <i class="fa-solid fa-sign-out-alt"></i>
+                        </button>
+                    </form>
+                </a>
+            </nav>
+        </div>
+        <div class="rightbox">
+            <div class="profile tabshow">
+                <div class="shop tabshow">
+                    <h1>Orders</h1>
+                    <% if (orders.length > 0) { %>
+                        <% orders.forEach(order => { %>
+                            <div class="orders">
+                                <strong>Order: <%= order.name %></strong>
+                                <strong>Seat: <%= order.seat %></strong>
+                                <div class="icons">
+                                    <form action="#" method="GET">
+                                        <button type="submit"><i class="fa-solid fa-edit update"></i></button>
+                                    </form>
+                                    <form action="#" method="POST">
+                                        <button type="submit"><i class="fa-solid fa-x delete"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        <% }) %>
+                    <% } else { %>
+                        <p>No orders found</p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

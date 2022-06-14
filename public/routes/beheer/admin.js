@@ -32,6 +32,13 @@ router.get('/', checkAuthenticated, (req, res) => {
     })
 })
 
+router.get('/getOrders', (req, res) => {
+    mysql.query('SELECT * FROM orders o LEFT JOIN product p ON o.product_id = p.product_id', (err, results) => {
+        if (err) throw err
+        res.render('admin/orders', {orders: results})
+    })
+})
+
 router.post('/add_product', (req, res) => {
     const name = req.body.name;
     const category = req.body.category;
