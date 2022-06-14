@@ -61,7 +61,9 @@
                             </p>
                             <strong><%= product.name %></strong>
                             <span><%= product.description %></span>
-                            <button>Buy now</button>
+                            <form action="webshop/order/<%= product.product_id %>" method="GET">    
+                                <button type="submit">Buy now</button>
+                            </form>
                         </div>
                         <h4>€ <%= product.price %></h4>
                     </li>

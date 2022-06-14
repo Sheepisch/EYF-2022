@@ -76,7 +76,6 @@ router.get('/getProduct/:product_id', (req, res) => {
         if (err) throw err
         res.render('admin/update_product', {product: results[0]})
     });
-    console.log(product_id);
 });
 
 
