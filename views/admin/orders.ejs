@@ -30,7 +30,7 @@
                     <i class="fa-solid fa-store"></i>
                 </a>
                 <a href="#">
-                    <form action="admin/getOrders" method="GET">
+                    <form action="/admin/getOrders" method="GET">
                         <button type="submit">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
@@ -54,14 +54,6 @@
                             <div class="orders">
                                 <strong>Order: <%= order.name %></strong>
                                 <strong>Seat: <%= order.seat %></strong>
-                                <div class="icons">
-                                    <form action="#" method="GET">
-                                        <button type="submit"><i class="fa-solid fa-edit update"></i></button>
-                                    </form>
-                                    <form action="#" method="POST">
-                                        <button type="submit"><i class="fa-solid fa-x delete"></i></button>
-                                    </form>
-                                </div>
                             </div>
                         <% }) %>
                     <% } else { %>

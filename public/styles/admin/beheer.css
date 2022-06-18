@@ -129,10 +129,6 @@ h2 {
     margin-top: 15px;
 }
 
-.product:hover {
-    font-size: larger;
-}
-
 .product strong:hover {
     color: #10ac84;
     cursor: pointer;

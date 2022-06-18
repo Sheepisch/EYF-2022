@@ -129,8 +129,8 @@ h2 {
     margin-top: 15px;
 }
 
-.orders strong:hover {
-    color: #10ac84;
+.orders:hover {
+    color: #3fb6a8;
     cursor: pointer;
 }
 

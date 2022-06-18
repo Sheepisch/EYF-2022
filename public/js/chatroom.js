@@ -42,12 +42,13 @@ document.onkeydown = function (e) {
     e = e || window.event;
     switch (e.which || e.keyCode) {
           case 13 : 
-          let msg = document.getElementById('msg').value;
-          socket.emit('message', {
-              'name': localStorage.getItem('Name'),
-              'msg': msg,
-          });
-          document.getElementById('msg').value = '';
+            let msg = document.getElementById('msg').value;
+            socket.emit('message', {
+                'name': localStorage.getItem('Name'),
+                'msg': msg,
+            });
+            document.getElementById('msg').value = '';
+            // sendMessage();
         break;
     }
 }

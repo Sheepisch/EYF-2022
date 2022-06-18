@@ -7,7 +7,7 @@ let ar = [];
 for (let i of li) {
     const last = i.lastElementChild;
     const x = last.textContent.trim();
-    const y = Number(x.substring(1));
+    const y = Number(x.substring(1,2));
     i.setAttribute('data-price', y);
     ar.push(i);
 }
@@ -38,7 +38,7 @@ function sortElem(field, li, asc) {
         const ax = a.getAttribute('data-price');
         const bx = b.getAttribute('data-price');
 
-        return ax> bx ? (1*dm) : (-1*dm);
+        return ax > bx ? (1*dm) : (-1*dm);
     });
     while(field.firstChild) {
         field.removeChild(field.firstChild);

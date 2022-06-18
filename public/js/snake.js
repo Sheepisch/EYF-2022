@@ -1,7 +1,7 @@
 // board
 const blockSize = 20;
-const rows = 20;
-const cols = 20;
+const rows = 30;
+const cols = 30;
 const context = board.getContext('2d');
 const startGame = document.getElementById('startGame');
 
