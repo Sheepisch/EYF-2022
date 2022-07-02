@@ -1,7 +1,7 @@
 canvas {
     display: block;
     margin: auto;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 #playbutton {
@@ -13,6 +13,36 @@ canvas {
     font-family: Arial, sans-serif;
     font-size: 30px;
     font-weight: bold;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     cursor: pointer;
+}
+body {
+    color: #03413a;
+    background-image: url("../../assets/images/Aarde 3.jpg");
+    background-size: 100%;
+    background-color: #39647c;
+    background-repeat: no-repeat;
+    background-position: -200%;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+div {
+    border-radius: 10px;
+    box-sizing: content-box;
+    background-color: rgba(253, 253, 253, 0.66);
+    opacity: 1.0;
+    margin: 10px auto;
+    max-width: 900px;
+    min-width: 125px;
+    padding: 20px;
+    text-align: center;
+}
+#board {
+    padding: 0;
+    margin: auto;
+    background-image: url("public/assets/images/globe.png");
+}
+#Game {
+    width: 600px;
 }

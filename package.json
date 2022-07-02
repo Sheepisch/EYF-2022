@@ -30,6 +30,6 @@
     "util": "^0.12.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.18"
   }
 }
