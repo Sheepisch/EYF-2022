@@ -1,10 +1,26 @@
-// // // Get video's from directory
-// const fs = fs();
-// function getVideos() {
-//     // const vidNames = fs.readdir('./public/assets/video');
-//     console.log(fs);
-// }
+function goToVideo(video) {
+    window.location.href = "http://localhost:3000/media/movies?name="+video;
+}
+function goToAudio(video) {
+    window.location.href = "http://localhost:3000/media/music?name="+video;
+}
 
+function setMediaSrc() {
+    // Get the query from the url
+    const query = window.location.search;
+    // Parse the query in an URLSearchParams object (which has handy functions)
+    const params = new URLSearchParams(query);
+    // Get the name out the params
+    const name = params.get('name');
+
+    const player = document.getElementById('player');
+    if (player.tagName === "VIDEO") {
+        player.src = '/../../assets/video/' + name;
+    } else if (player.tagName === "AUDIO") {
+        player.src = '/../../assets/music/' + name;
+    }
+
+}
 
 // ---------------------------------------------------------
 // Start or pause the video
@@ -51,26 +67,4 @@ function toggleFullScreen(container, fullScreenButton) {
         fullScreenButton.innerHTML = '<i class="fa-solid fa-compress-arrows-alt"></i>';
     }
 }
-// Timers ---------------------------------------------------------------------------------
-const timeElapsed = document.getElementById('time-elapsed');
-const duration = document.getElementById('duration');
-// Get the time in minutes and seconds
-function formatTime(timeInSeconds) {
-    const result = new Date(timeInSeconds * 1000).toISOString().substr(11, 8);
 
-    return {
-        minutes: result.substr(3, 2),
-        seconds: result.substr(6, 2),
-    };
-};
-// Sets the duration of the video and the max value of the time bar
-function initializeVideo() {
-    const videoDuration = Math.round(video.duration);
-    const time = formatTime(videoDuration);
-    duration.innerText = `${time.minutes}:${time.seconds}`;
-    duration.setAttribute('datetime', `${time.minutes}m ${time.seconds}s`)
-}
-
-const iets = document.getElementById('player');
-console.log(iets);
-// iets.addEventListener('loadedmetadata', initializeVideo);

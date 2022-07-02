@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../styles/mediaStyle.css">
+
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+        <script src="../js/mediaGedrag.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/BrowserFS/2.0.0/browserfs.js"></script>
+
+    <title>Movie theater</title>
+</head>
+<body>
+<div class="upperMenu header">
+    <s class="title">Movies</s>
+    <button id="settings" class="upperMenuButton"><i class="fa-solid fa-sliders fa-xs"></i></button>
+    <button id="terug" class="upperMenuButton"><a href="/media">
+            <i class="fa-solid fa-reply fa-xs"></i></a></button>
+</div>
+<div class="content menu">
+    <% if (videos.length > 0) { %>
+        <% videos.forEach(video => { %>
+            <div class="item" id="<%=video%>" onclick="goToVideo('<%=video%>')">
+                <h3><%=video.split(".")[0]%></h3>
+            </div>
+        <% }) %>
+    <% } %>
+</div>
+
+</body>
+</html>

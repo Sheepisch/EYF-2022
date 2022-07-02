@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../styles/media.css">
+
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/BrowserFS/2.0.0/browserfs.js"></script>
+
+    <title>Movie theater</title>
+</head>
+<body onload="setMediaSrc()">
+<div class="upperMenu header">
+    <s class="title">Movie theater</s>
+    <button id="settings" class="upperMenuButton"><i class="fa-solid fa-sliders fa-xs"></i></button>
+    <button id="terug" class="upperMenuButton"><a href="/media/movieList">
+            <i class="fa-solid fa-reply fa-xs"></i></a></button>
+</div>
+
+<div class="content" id="videoContent">
+    <div class="videoHolder">
+        <video class="video" id="player" controls>
+        </video>
+    </div>
+</div>
+</div>
+<script src="../js/mediaGedrag.js"></script>
+</body>
+</html>

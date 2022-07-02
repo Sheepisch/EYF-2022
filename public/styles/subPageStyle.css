@@ -6,9 +6,8 @@ body {
     background-position: -200%;
     background-attachment: fixed;
     font-family: Calibri, sans-serif;
-    alignment: center;
-    max-width: 80vw;
-    min-width: 15vw;
+    align-items: center;
+    width: 80vw;
     margin: auto;
 }
 
@@ -86,49 +85,3 @@ button {
     height: 40px;
     width: 80px;
 }
-
-/*html, body {
-    width: calc(100% - 1em);
-    height: calc(100% - 1em);
-}
-
-body {
-    background-image: url("/assets/images/Aarde 3.jpg");
-    background-size: 100%;
-    background-color: #39647c;
-    background-repeat: no-repeat;
-    background-position: -200%;
-    background-attachment: fixed;
-}
-
-.templateButton {
-    height: 30px;
-    background-color: white;
-    border-color: #39647c;
-    border-width: 1px;
-    border-radius: 5px;
-    margin-right: 10px;
-    position: relative;
-    float: right;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-}
-
-.header {
-    border-radius: 5px;
-    background-color: rgba(245, 255, 254, 0.8);
-    margin: 5px auto;
-    max-width: 900px;
-    min-width: 125px;
-    padding: 20px;
-}
-.upperMenu {
-    background-color: white;
-    border-radius: 10px;
-    fill-opacity: 90%;
-}
-*/
