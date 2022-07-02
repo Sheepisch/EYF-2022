@@ -5,6 +5,7 @@
     <title class="title">Tulip Weather</title>
     <link href="../styles/SubPageStyleWeather.css" rel="stylesheet" type="text/css">
     <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
+    <link href="../styles/weatherStyle.css" rel="stylesheet" type="text/css">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
 </head>
 <body>
@@ -31,9 +32,66 @@
     <div class="container">
         <div class="left">
             <img src="" alt="">
+
         </div>
     </div>
 </div>
+
+<div class="topnav" id="myTopNav">
+    <a class="active" id="home" href="views/weather.ejs">Home</a>
+    <a href="weatherRadar.ejs">Weather Radar</a>
+    <a href="weatherChart.ejs">Weather Chart</a>
+    <a href="about.ejs">About</a>
+</div>
+<div class="total">
+    <h1>The weather forecast of this week</h1>
+    <table class="week" id="weather">
+        <tr class="days" id="header">
+            <th id="day1">Today</th>
+            <th id="day2">Tomorrow</th>
+            <th id="day3">Next Day</th>
+            <th id="day4">Day After</th>
+
+        </tr>
+        <tr class="picto" id="pics">
+            <td><img id="i1" src="../../assets/images/weatherI/rain.png" alt="rain" ></td>
+            <td><img id="i2" src="../../assets/images/weatherI/sunrain.png" alt="sunrain" ></td>
+            <td><img id="i3" src="../../assets/images/weatherI/cloudy.png" alt="cloudy" ></td>
+            <td><img id="i4" src="../../assets/images/weatherI/sun(2).png" alt="sun" ></td>
+        </tr>
+        <tr class="min" id="mTemp">
+            <td>Min. Temperature</td>
+            <td>Min. Temperature</td>
+            <td>Min. Temperature</td>
+            <td>Min. Temperature</td>
+        </tr>
+        <tr class="mintemp" id="mNum">
+            <td id="n1">6&deg</td>
+            <td id="n2">7&deg</td>
+            <td id="n3">9&deg</td>
+            <td id="n4">25&deg</td>
+        </tr>
+        <tr class="max" id="maTemp">
+            <td>Max. Temperature</td>
+            <td>Max. Temperature</td>
+            <td>Max. Temperature</td>
+            <td>Max. Temperature</td>
+        </tr>
+        <tr class="maxtemp" id="maNum">
+            <td id="n5">16&deg</td>
+            <td id="n6">19&deg</td>
+            <td id="n7">21&deg</td>
+            <td id="n8">25&deg</td>
+        </tr>
+        <tr class="wind" id="wind">
+            <td id="w1"></td>
+            <td id="w2"></td>
+            <td id="w3"></td>
+            <td id="w4"></td>
+        </tr>
+    </table>
+</div>
+<script type= "module" src="../../js/weatherS.js"></script>
     
 </body>
 </html>

@@ -13,7 +13,7 @@ const destinationRouter = require('./public/routes/destination')
 const mediaRouter = require('./public/routes/media')
 const adminRouter = require('./public/routes/beheer/admin')
 const chatRouter = require('./public/routes/chatbox')
-const captivePortalRouter = require('./public/routes/captivePortal')
+const destinationPortalRouter = require('./public/routes/destination')
 
 const connection = require('./db_config')
 const methodOverride = require('method-override')
@@ -30,7 +30,7 @@ app.use('/destination', destinationRouter)
 app.use('/media', mediaRouter)
 app.use('/admin', adminRouter)
 app.use('/chatBox', chatRouter)
-app.use('/captivePortal',captivePortalRouter);
+app.use('/destination',destinationRouter);
 
 app.get('/', function(req, res) {
     res.render('index')
