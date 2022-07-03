@@ -1,5 +1,4 @@
 html, body {
-    margin: 5px;
     padding: 0;
 }
 div {
@@ -14,51 +13,76 @@ div {
     text-align: center;
     align-content: center;
 }
+.topnav button {
+    background-color: #4dc0fe; /* Green background */
+    border: 1px solid #ffffff; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 90%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.topnav button:hover {
+    background-color: rgba(192, 177, 55, 0.24);
+}
+.nav {
+    display: flex;
+    color: black;
+    font-size: 20px;
+}
+
+.nav a:link {
+    text-decoration: none;
+}
 body {
-    background-image: url("public/assets/images/Aarde 3.jpg");
+    /*background-image: url("public/assets/images/Aarde 3.jpg");*/
     background-size: 100%;
     background-color: #39647c;
     background-repeat: no-repeat;
     background-position: -200%;
     background-attachment: fixed;
-    font-family: Calibri, sans-serif;
     align-content: center;}
 
 .topnav {
-    background-color: rgba(22, 138, 203, 0.53);
-    width:30px;
+    /*background-color: rgba(22, 138, 203, 0.53);*/
+    width:auto;
     float: left;
     position: relative;
-    top: 100px;
+    top: 103px;
     z-index:999;
-
-
 }
 
 .topnav a {;
     display: block;
     color: #ffffff;
     text-align: left;
-    padding: 10px 0px;
+    padding: 10px 0;
     text-decoration: none;
     font-size: 17px;
     width:140px
 
 }
 
-.topnav a.active {
-    background-color: rgba(203, 22, 22, 0.77);
-    color: #ffffff;
-}
+/*.topnav a.active {*/
+/*    background-color: rgb(22, 64, 203);*/
+/*    color: #ffffff;*/
+/*}*/
 
 @media screen and (max-width: 800px) {
     .topnav a {float: none;}
 }
 
-.topnav a:hover {
-    background-color: rgba(16, 70, 147, 0.75);
-    color: black;
-}
+/*.topnav a:hover {*/
+/*    background-color: rgba(197, 3, 3, 0.79);*/
+/*    color: black;*/
+/*    font-weight: bold;*/
+/*}*/
 
 body {
     font-family: Calibri, sans-serif;
@@ -73,7 +97,7 @@ div.total {
     max-width: 1000px;
     min-height: auto;
     width: auto;
-    margin: 16px auto;
+    margin:auto;
     position: relative;
     border-radius: 18px;
     box-shadow: 0 0 0 1pt whitesmoke;
@@ -95,7 +119,6 @@ div.total1 {
 }
 
 table, th, td {
-    text-align-all: left;
     border-collapse: collapse;
 
 
@@ -104,20 +127,14 @@ table, th, td {
 
 th, td {
     width: 300px;
-    height: 60px;
+    height: 30px;
 }
 
 
 h1 {
-    text-align: left;
     border-radius: 18px;
 }
 
-/*
-.wind {
-    background-color: lightgrey;
-}
-*/
 .days, .picto, .min, .mintemp, .max, .maxtemp, .wind {
     text-align: center;
 }
@@ -126,8 +143,8 @@ h1 {
     color: dimgrey;
 }
 
-#weer {
-  background-image: linear-gradient( lightsteelblue 25%, aliceblue 100%)
+#weather {
+  background-image: linear-gradient( lightsteelblue 25%, rgba(240, 248, 255, 0.73) 100%);
 
 }
 
@@ -140,63 +157,5 @@ max.selected {
 td.selected {
     background-color: #333333;
     color: white;
-}
-
-.registerbtn {
-    background-color: #333333;
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-    font-family: Calibri, sans-serif;
-}
-
-.registerbtn:hover {
-    opacity: 3;
-}
-
-input[type="tel"], input[type="email"] {
-    width: 96.5%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: white;
-
-
-}
-
-input[type="tel"]:focus, input[type="email"]:focus {
-    background-color: lightsteelblue;
-    outline: 1px black;
-    border: 1px;
-}
-
-#kaart {
-    padding-left: 15px;
-    padding-top: 25px;
-}
-
-.svgweer1{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-}
-
-.weer_kaart {
-    position: relative;
-    display: inline-block;
-    transition: transform 150ms ease-in-out;
-}
-
-.weer_kaart svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-
 }
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weer kaart</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<div class="topnav" id="myTopNav">
+    <a id="home" href="index.html">Home</a>
+    <a href="radar_weer.html">Weerradar</a>
+    <a href="Weer%20alarm.html">Weer alarm</a>
+    <a class="active" href="Weer_kaart.html">Weer kaart</a>
+    <a href="weer_steden.html">weer steden</a>
+    <a href="about.html">About</a>
+</div>
+<div class="total1">
+    <h2>Weer kaart</h2>
+
+    <p>Hier vind je de weersverwachting van de komende dagen</p>
+
+    <p>
+        <label for="dagen">Kies de dag:</label>
+        <select id="dagen" name="dagen" onchange="kaartGrades()">
+            <option value="vandaag">Vandaag</option>
+            <option value="morgen">Morgen</option>
+            <option value="overmorgen">Overmorgen</option>
+        </select>
+    </p>
+    <div class="weer_kaart">
+        <img id="kaart" src="picto/kaart-nederland-jan-hi.png" alt="nlkaart" height="500px">
+
+        <svg style="height: 100%; width: 100%;">
+            <text id="s1" x="175" y="200" fill="red">5&deg</text>
+            <text id="s2" x="310" y="135" fill="red">7&deg</text>
+            <text id="s3" x="150" y="300" fill="red">5&deg</text>
+            <text id="s4" x="300" y="280" fill="red">6&deg</text>
+            <text id="s5" x="200" y="370" fill="red">4&deg</text>
+        </svg>
+        <svg viewBox="0 0 100 100">
+             
+            <defs>
+                   
+                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5"
+                        orient="auto-start-reverse">
+                         
+                    <path d="M 0 0 L 10 5 L 0 10 z"/>
+                       
+                </marker>
+
+                   
+                 
+            </defs>
+             
+            <polyline id="pijl" points="10,20 20,30" fill="none" stroke="black"
+                      marker-start="url(#arrow)" display="block"></polyline>
+        </svg>
+    </div>
+</div>
+
+<script src="script/weerkaart.js"></script>
+</body>
+</html>
