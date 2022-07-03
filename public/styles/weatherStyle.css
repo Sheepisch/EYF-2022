@@ -47,7 +47,6 @@ body {
     background-repeat: no-repeat;
     background-position: -200%;
     background-attachment: fixed;
-    font-family: Calibri, sans-serif;
     align-content: center;}
 
 .topnav {
@@ -63,7 +62,7 @@ body {
     display: block;
     color: #ffffff;
     text-align: left;
-    padding: 10px 0px;
+    padding: 10px 0;
     text-decoration: none;
     font-size: 17px;
     width:140px
@@ -120,7 +119,6 @@ div.total1 {
 }
 
 table, th, td {
-    text-align-all: left;
     border-collapse: collapse;
 
 
@@ -129,12 +127,11 @@ table, th, td {
 
 th, td {
     width: 300px;
-    height: 60px;
+    height: 30px;
 }
 
 
 h1 {
-    text-align: left;
     border-radius: 18px;
 }
 
