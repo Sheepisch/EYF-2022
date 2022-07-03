@@ -1,0 +1,16 @@
+[
+  {"city": "Amsterdam","weer": [{"minTemp": 6, "maxTemp": 14, "wind": "geen", "picto": "picto/rain%20(1).png"},
+    {"minTemp": 4, "maxTemp": 13, "wind": "NO", "picto": "picto/rainsun.png"},
+    {"minTemp": 5, "maxTemp": 15, "wind": "NW", "picto": "picto/rainsun.png"},
+    {"minTemp": 9, "maxTemp": 16, "wind": "ZW", "picto": "picto/rain%20(1).png"}]},
+
+  {"city": "Antwerpen","weer": [{"minTemp": 10, "maxTemp": 18, "wind": "NO", "picto": "picto/rain%20(1).png"},
+    {"minTemp": 10, "maxTemp": 18, "wind": "NO", "picto": "picto/rainsun.png"},
+    {"minTemp": 10, "maxTemp": 18, "wind": "NO", "picto": "picto/rainsun.png"},
+    {"minTemp": 10, "maxTemp": 18, "wind": "NO", "picto": "picto/sun.png"}]},
+
+  {"city": "Barcalona", "weer": [{ "minTemp": 16, "maxTemp": 24, "wind": "NO", "picto": "picto/sun.png"},
+    {"minTemp": 14, "maxTemp": 22, "wind": "NW", "picto": "picto/sun.png"},
+    {"minTemp": 15, "maxTemp": 23, "wind": "ZW", "picto": "picto/rainsun.png"},
+    {"minTemp": 18, "maxTemp": 25, "wind": "Z", "picto": "picto/sun.png" }]}
+]

@@ -5,26 +5,96 @@
     <title class="title">Tulip Weather</title>
     <link href="../styles/SubPageStyleWeather.css" rel="stylesheet" type="text/css">
     <link href="../styles/subPageStyle.css" rel="stylesheet" type="text/css">
+    <link href="../styles/weatherStyle.css" rel="stylesheet" type="text/css">
+    <link href="../styles/template-scrollable.css" rel="stylesheet" type="text/css">
+
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/a360f97177.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
 </head>
 <body>
 <div class="upperMenu">
-    <s class="title">Weather</s>
+    <s class="title">Destination information</s>
     <button class="upperMenuButton" id="settings"><i class="fa-solid fa-sliders fa-xs"></i></button>
     <button class="upperMenuButton" id="back"><a href="/"> <i class="fa-solid fa-reply fa-xs" style=""></i></a></button>
 </div>
-<div class="content">
-    <div class="nav">  
-        <div class="home">
-            <a href="/destination">Home</a>
+<div class="topnav" id="myTopNav">
+    <a href="/destination" class="active" id="home"><button>Home</button></a>
+    <a href="/destination/weather"><button>Weather</button></a>
+    <a href="/destination/sights"><button>Sights</button></a>
+</div>
+<!--    This container contains the tiles    -->
+<div class="containertiles">
+    <div class="row">
+        <!--col1 (left grid) 8.33%-->
+        <div class="col-10 dest_info">
+            <table>
+                <tr>
+                    <th colspan="2"><h2>General flight information</h2></th>
+                </tr>
+                <tr>
+                    <td id="L1">Destination</td>
+                    <td>Dublin</td>
+                </tr>
+                <tr>
+                    <td id="L4">Local Time at Destination</td>
+                    <td id="R4">Loading</td>
+                </tr>
+                <tr>
+                    <th colspan="2"><h2>Live destination weather</h2></th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <span id="temperature"></span>
+                    </td>
+                    <td><a id="weather_icon" href=""></a></td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td><span id="date"></span></td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td><span id="time"></span></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><span id="city"></span></td>
+                </tr>
+                <tr>
+                    <td>Region</td>
+                    <td><span id="region"></span></td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td><span id="country"></span></td>
+                </tr>
+
+
+                <tr>
+                    <th colspan="2"><h2>Expected time of arrival</h2></th>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div>
+                            <div id="t1"> Current Time: </div>
+                            <div id="t2"> FlightDuration: 30 minutes. </div>
+                            <div id="t3"> Expected time of arrival: </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                    </td>
+                </tr>
+            </table>
         </div>
-        <div class="weather">
-            <a href="/destination/weather">Weather</a>
-        </div>
-        <div class="sights">
-            <a href="/destination/sights">Sights</a>
-        </div>
-    </div>
+<script src="../../js/destination/destinationInfo.js"></script>
+
 </div>
 </div>
 </body>
